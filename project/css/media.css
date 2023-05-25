@@ -1,0 +1,39 @@
+@media (max-width: 1024px) {
+  .container {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+  .broadcast__list {
+    --broadcast-elements: 2;
+  }
+  .broadcast__wrapper {
+    align-items: flex-start;
+  }
+
+  /* playlists */
+  .playlists__wrapper {
+    flex-direction: column;
+  }
+
+  .playlists__list {
+    position: absolute;
+    --playlists-elements: 3;
+  }
+
+  .swiper-slide__img--1 {
+    background-image: url("../img/gutenberg-dm-1024.jpg");
+  }
+
+  .swiper-slide__img--2 {
+    background-image: url("../img/vasilyeva-an-1024.jpg");
+  }
+
+  .form__bottom {
+    --form__bottom-elements: 1;
+  }
+
+  .age-limit {
+    display: none;
+  }
+ }
