@@ -9,11 +9,11 @@ window.addEventListener('keydown', (e) => {
   }
 });
 
-document.querySelector('#search').addEventListener('click', event => {
-  event._isClickWithInSearch = true;
-});
-
-document.getElementById('search').addEventListener('click', event => {
-  if (event._isClickWithInSearch) return;
-  event.currentTarget.classList.remove('active');
+window.addEventListener('click', e => { // при клике в любом месте окна браузера
+  const target = e.target; // находим элемент, на котором был клик
+  console.log(target);
+  if (!target.closest('#search') && !target.closest('.header__btn-search'))
+   { // если этот элемент или его родительские элементы не окно навигации и не кнопка
+    document.getElementById('search').classList.remove('active') // то закрываем окно навигации, удаляя активный класс
+  }
 });

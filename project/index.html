@@ -17,6 +17,16 @@
 
 <body>
   <header class="header">
+    <div class="header__adaptive">
+      <div class="container header__container header__container--top">
+        <a class="logo header__logo-adaptive" href="#">
+          <picture>
+            <source srcset="./img/header-logo-320.svg.svg" media="(max-width:321px)">
+            <img src="./img/header-logo-1024.svg" alt="Логотип Радио W-Wave">
+          </picture>
+        </a>
+      </div>
+    </div>
     <div class="header__top">
       <div class="container header__container header__container--top flex">
         <button class="btn-reset burger" aria-label="Открыть меню навигации" id="shift__menu">
@@ -27,108 +37,108 @@
         <a class="logo header__logo" href="#">
           <img src="img/header-logo.svg" alt="Логотип Радио W-Wave">
         </a>
-        <nav class="nav nav--top">
-          <ul class="list header__list  header__list--top flex">
-            <li class="header__item header__item--top">
-              <a class="nav__link header__link header__link--top" href="#podcasts">Подкасты</a>
-            </li>
-            <li class="header__item header__item--top">
-              <a class="nav__link header__link header__link--top" href="#broadcast">Передачи</a>
-            </li>
-            <li class="header__item header__item--top">
-              <a class="nav__link header__link header__link--top" href="#guests">Гости</a>
-            </li>
-            <li class="header__item header__item--top">
-              <a class="nav__link header__link header__link--top" href="#playlists">Плейлисты</a>
-            </li>
-            <li class="header__item header__item--top">
-              <a class="nav__link header__link header__link--top" href="#about-us">О&nbsp;нас</a>
-            </li>
-          </ul>
-        </nav>
-        <div class="header__btn-wrapper flex">
-          <label class="visually-hidden" for="search__btn">Открыть форму поиска</label>
-          <button class="header__btn header__btn-search btn-reset" type="button" id="search__btn">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
-                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-              <path d="M20.9999 21L16.6499 16.65" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-          </button>
-          <form class="form search  flex" action="https://jsonplaceholder.typicode.com/posts" method="POST" id="search">
-            <label class="visually-hidden" for="search">Форма поиска открыта</label>
-            <input class="search__input" type="text" placeholder="Поиск по&nbsp;сайту">
-            <label class="visually-hidden" for="search__start">Начать поиск</label>
-            <button class="header__btn header__btn-search form__btn-search" type="submit" id="search__submit">
+        <div class="nav-wrapper flex">
+          <nav class="nav nav--top">
+            <ul class="list header__list  header__list--top flex">
+              <li class="header__item header__item--top">
+                <a class="nav__link header__link header__link--top" href="#podcasts">Подкасты</a>
+              </li>
+              <li class="header__item header__item--top">
+                <a class="nav__link header__link header__link--top" href="#broadcast">Передачи</a>
+              </li>
+              <li class="header__item header__item--top">
+                <a class="nav__link header__link header__link--top" href="#guests">Гости</a>
+              </li>
+              <li class="header__item header__item--top">
+                <a class="nav__link header__link header__link--top" href="#playlists">Плейлисты</a>
+              </li>
+              <li class="header__item header__item--top">
+                <a class="nav__link header__link header__link--top" href="#about-us">О&nbsp;нас</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="header__btn-wrapper flex">
+            <label class="visually-hidden" for="search__btn">Открыть форму поиска</label>
+            <button class="header__btn header__btn-search btn-reset" type="button" id="search__btn">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
-                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-              <path d="M20.9999 21L16.6499 16.65" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path
+                  d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M20.9999 21L16.6499 16.65" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
             </button>
-          </form>
-          <a class="log-in-btn btn-reset" id="open-modal-btn" tabindex="0" aria-label="Кнопка вход">Вход</a>
-          <div class="modal" id="header-modal">
-            <div class="modal__wrapper flex">
-              <button class="modal__close-btn btn-reset" id="modal__close-btn">
-                <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="21" cy="21" r="19.5" stroke-width="3" />
-                  <path d="M29.6777 12L12 29.6777M29.6777 29.6777L12 12"  stroke-width="3" />
+            <form class="form search  flex" action="https://jsonplaceholder.typicode.com/posts" method="POST" id="search">
+              <label class="visually-hidden" for="search__input">Форма поиска открыта</label>
+              <input class="search__input" type="text" placeholder="Поиск по&nbsp;сайту" id="search__input">
+              <label class="visually-hidden" for="search__start">Начать поиск</label>
+              <button class="header__btn header__btn-search form__btn-search" type="submit" id="search__start">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M20.9999 21L16.6499 16.65" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
               </button>
-              <h2 class="modal__title title-2">Вход</h2>
-              <div class="modal__notice flex">
-                <span class="notice-text text-lg">Если у&nbsp;вас ещё нет аккаунта,</span>
-                <a href="#" class="registration-link text-lg">зарегистрируйтесь</a>
+            </form>
+            <a class="log-in-btn btn-reset" id="open-modal-btn" tabindex="0" aria-label="Кнопка вход">Вход</a>
+            <div class="modal" id="header-modal">
+              <div class="modal__wrapper flex">
+                <button class="modal__close-btn btn-reset" id="modal__close-btn">
+                  <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="21" cy="21" r="19.5" stroke-width="3" />
+                    <path d="M29.6777 12L12 29.6777M29.6777 29.6777L12 12"  stroke-width="3" />
+                  </svg>
+                </button>
+                <h2 class="modal__title title-2">Вход</h2>
+                <div class="modal__notice flex">
+                  <span class="notice-text text-lg">Если у&nbsp;вас ещё нет аккаунта,</span>
+                  <a href="#" class="registration-link text-lg" target="_blank">зарегистрируйтесь</a>
+                </div>
+                <form class="form modal__form" action="https://jsonplaceholder.typicode.com/posts" method="POST" id="modal-form">
+                  <div class="form__input-box">
+                    <label class="modal__label visually-hidden" for="login">Логин</label>
+                    <input class="form__input modal__form-input text-lg" id="login" type="text" placeholder="Логин" autocomplete="off">
+                  </div>
+                  <div class="form__input-box">
+                    <label class="modal__label visually-hidden" for="password">Пароль</label>
+                    <input class="form__input modal__form-input text-lg" type="text" placeholder="Пароль" id="password" autocomplete="off">
+                  </div>
+                  <button class="modal__btn btn-2">Войти</button>
+                </form>
+                <span class="modal__border"></span>
+                <span class="modal__helper-social text-lg">Войти с&nbsp;помощью:</span>
+                <ul class="modal__list list flex">
+                  <li class="modal__item">
+                    <a class="modal__link" href="#">
+                      <svg class="fb" width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M23.3002 33.6667V20.7667H27.6205L28.2668 15.7519H23.3002V12.5519C23.3002 11.1 23.7039 10.1093 25.7853 10.1093H28.4409V5.62408C27.1553 5.48769 25.8633 5.42154 24.5705 5.42594C20.7428 5.42594 18.1224 7.76297 18.1224 12.0556V15.7519H13.7928V20.7667H18.1224V33.6667H2.18535C1.69421 33.6667 1.22318 33.4716 0.875891 33.1243C0.528601 32.777 0.333496 32.306 0.333496 31.8148V2.1852C0.333496 1.69405 0.528601 1.22303 0.875891 0.875738C1.22318 0.528449 1.69421 0.333344 2.18535 0.333344H31.815C32.3061 0.333344 32.7771 0.528449 33.1244 0.875738C33.4717 1.22303 33.6668 1.69405 33.6668 2.1852V31.8148C33.6668 32.306 33.4717 32.777 33.1244 33.1243C32.7771 33.4716 32.3061 33.6667 31.815 33.6667H23.3002Z"
+                          />
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="modal__item">
+                    <a class="modal__link" href="#">
+                      <svg class="vk" width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="33.33" height="33.33" rx="2"/>
+                        <path
+                          d="M17.7487 23.332H16.3854C16.3854 23.332 13.3772 23.5131 10.7277 20.7545C7.83835 17.7461 5.28686 11.7765 5.28686 11.7765C5.28686 11.7765 5.13973 11.3853 5.29964 11.1959C5.47938 10.9831 5.96857 10.9695 5.96857 10.9695L9.22782 10.9482C9.22782 10.9482 9.53491 10.9994 9.75468 11.1608C9.93588 11.294 10.0373 11.543 10.0373 11.543C10.0373 11.543 10.5641 12.8752 11.2617 14.0804C12.6233 16.4331 13.2575 16.9477 13.7198 16.6957C14.3934 16.3283 14.1914 13.3698 14.1914 13.3698C14.1914 13.3698 14.2037 12.296 13.8522 11.8177C13.58 11.4475 13.0667 11.3391 12.84 11.3089C12.6566 11.2844 12.9576 10.8587 13.3478 10.6676C13.9343 10.3803 14.9699 10.3641 16.1938 10.3765C17.1473 10.3863 17.4219 10.4458 17.7946 10.5357C18.6597 10.7446 18.6327 11.4138 18.5745 12.8578L18.5745 12.8579C18.5571 13.2893 18.537 13.7899 18.537 14.3681C18.537 14.4983 18.5332 14.6371 18.5293 14.7798V14.7799C18.509 15.5193 18.4858 16.3656 18.9726 16.6802C19.2223 16.8415 19.8331 16.7042 21.3603 14.111C22.084 12.8819 22.627 11.4368 22.627 11.4368C22.627 11.4368 22.7453 11.1791 22.9297 11.0688C23.1181 10.9561 23.3726 10.9907 23.3726 10.9907L26.8023 10.9695C26.8023 10.9695 27.8329 10.8466 27.9997 11.3118C28.1747 11.8001 27.6146 12.9402 26.2135 14.8077C24.8827 16.5813 24.236 17.2332 24.2968 17.8106C24.3401 18.2221 24.7429 18.5959 25.5137 19.311L25.5668 19.3603C27.2548 20.9272 27.7051 21.7501 27.8121 21.9456C27.8207 21.9615 27.8271 21.9732 27.8318 21.9809C28.5873 23.2337 26.9939 23.332 26.9939 23.332L23.9477 23.3746C23.9477 23.3746 23.2931 23.5041 22.4317 22.9125C21.9813 22.6033 21.5409 22.0985 21.1214 21.6174L21.1214 21.6174C20.4798 20.8818 19.8868 20.2019 19.3806 20.3624C18.5317 20.6319 18.5583 22.4613 18.5583 22.4613C18.5583 22.4613 18.5645 22.852 18.371 23.0601C18.1605 23.2866 17.7487 23.332 17.7487 23.332Z"
+                          />
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="modal__item">
+                    <a class="modal__link" href="#">
+                      <svg class="google" width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="33.33" height="33.33" rx="2" />
+                        <path
+                          d="M20.9403 11.9923C20.1517 11.2694 18.7687 10.4043 16.7183 10.4043C13.8309 10.4043 11.3802 12.2649 10.4945 14.8364C10.2761 15.5001 10.1427 16.2111 10.1427 16.9459C10.1427 17.6806 10.2761 18.3917 10.5066 19.0553C11.3802 21.6269 13.8309 23.4874 16.7183 23.4874C18.344 23.4874 19.5815 23.0489 20.5036 22.4208C21.9595 21.4254 22.6146 19.9441 22.7359 18.9605H16.7183V15.0024H26.9701C27.1277 15.666 27.2006 16.3059 27.2006 17.1829C27.2006 20.4299 26.0116 23.1675 23.9491 25.028C22.1414 26.6634 19.6664 27.6115 16.7183 27.6115C12.4477 27.6115 8.75954 25.2176 6.96398 21.7335C6.22395 20.2877 5.79932 18.6642 5.79932 16.9459C5.79932 15.2275 6.22395 13.604 6.96398 12.1582C8.75954 8.67409 12.4477 6.28027 16.7183 6.28027C19.6664 6.28027 22.1293 7.33499 24.0219 9.05333L20.9403 11.9923Z"
+                          />
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
               </div>
-              <form class="form modal__form" action="https://jsonplaceholder.typicode.com/posts" method="POST" id="modal-form">
-                <div class="form__input-box">
-                  <label class="modal__label visually-hidden" for="login">Логин</label>
-                  <input class="form__input modal__form-input text-lg" id="login" type="text" placeholder="Логин" autocomplete="off">
-                </div>
-                <div class="form__input-box">
-                  <label class="modal__label visually-hidden" for="password">Пароль</label>
-                  <input class="form__input modal__form-input text-lg" type="text" placeholder="Пароль" id="password" autocomplete="off">
-                </div>
-                <button class="modal__btn btn-2">Войти</button>
-              </form>
-              <span class="modal__border"></span>
-              <span class="modal__helper-social text-lg">Войти с&nbsp;помощью:</span>
-              <ul class="modal__list list flex">
-                <li class="modal__item">
-                  <a class="modal__link" href="#">
-                    <svg class="fb" width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M23.3002 33.6667V20.7667H27.6205L28.2668 15.7519H23.3002V12.5519C23.3002 11.1 23.7039 10.1093 25.7853 10.1093H28.4409V5.62408C27.1553 5.48769 25.8633 5.42154 24.5705 5.42594C20.7428 5.42594 18.1224 7.76297 18.1224 12.0556V15.7519H13.7928V20.7667H18.1224V33.6667H2.18535C1.69421 33.6667 1.22318 33.4716 0.875891 33.1243C0.528601 32.777 0.333496 32.306 0.333496 31.8148V2.1852C0.333496 1.69405 0.528601 1.22303 0.875891 0.875738C1.22318 0.528449 1.69421 0.333344 2.18535 0.333344H31.815C32.3061 0.333344 32.7771 0.528449 33.1244 0.875738C33.4717 1.22303 33.6668 1.69405 33.6668 2.1852V31.8148C33.6668 32.306 33.4717 32.777 33.1244 33.1243C32.7771 33.4716 32.3061 33.6667 31.815 33.6667H23.3002Z"
-                        />
-                    </svg>
-                  </a>
-                </li>
-                <li class="modal__item">
-                  <a class="modal__link" href="#">
-                    <svg class="vk" width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <rect width="33.33" height="33.33" rx="2"/>
-                      <path
-                        d="M17.7487 23.332H16.3854C16.3854 23.332 13.3772 23.5131 10.7277 20.7545C7.83835 17.7461 5.28686 11.7765 5.28686 11.7765C5.28686 11.7765 5.13973 11.3853 5.29964 11.1959C5.47938 10.9831 5.96857 10.9695 5.96857 10.9695L9.22782 10.9482C9.22782 10.9482 9.53491 10.9994 9.75468 11.1608C9.93588 11.294 10.0373 11.543 10.0373 11.543C10.0373 11.543 10.5641 12.8752 11.2617 14.0804C12.6233 16.4331 13.2575 16.9477 13.7198 16.6957C14.3934 16.3283 14.1914 13.3698 14.1914 13.3698C14.1914 13.3698 14.2037 12.296 13.8522 11.8177C13.58 11.4475 13.0667 11.3391 12.84 11.3089C12.6566 11.2844 12.9576 10.8587 13.3478 10.6676C13.9343 10.3803 14.9699 10.3641 16.1938 10.3765C17.1473 10.3863 17.4219 10.4458 17.7946 10.5357C18.6597 10.7446 18.6327 11.4138 18.5745 12.8578L18.5745 12.8579C18.5571 13.2893 18.537 13.7899 18.537 14.3681C18.537 14.4983 18.5332 14.6371 18.5293 14.7798V14.7799C18.509 15.5193 18.4858 16.3656 18.9726 16.6802C19.2223 16.8415 19.8331 16.7042 21.3603 14.111C22.084 12.8819 22.627 11.4368 22.627 11.4368C22.627 11.4368 22.7453 11.1791 22.9297 11.0688C23.1181 10.9561 23.3726 10.9907 23.3726 10.9907L26.8023 10.9695C26.8023 10.9695 27.8329 10.8466 27.9997 11.3118C28.1747 11.8001 27.6146 12.9402 26.2135 14.8077C24.8827 16.5813 24.236 17.2332 24.2968 17.8106C24.3401 18.2221 24.7429 18.5959 25.5137 19.311L25.5668 19.3603C27.2548 20.9272 27.7051 21.7501 27.8121 21.9456C27.8207 21.9615 27.8271 21.9732 27.8318 21.9809C28.5873 23.2337 26.9939 23.332 26.9939 23.332L23.9477 23.3746C23.9477 23.3746 23.2931 23.5041 22.4317 22.9125C21.9813 22.6033 21.5409 22.0985 21.1214 21.6174L21.1214 21.6174C20.4798 20.8818 19.8868 20.2019 19.3806 20.3624C18.5317 20.6319 18.5583 22.4613 18.5583 22.4613C18.5583 22.4613 18.5645 22.852 18.371 23.0601C18.1605 23.2866 17.7487 23.332 17.7487 23.332Z"
-                        />
-                    </svg>
-                  </a>
-                </li>
-                <li class="modal__item">
-                  <a class="modal__link" href="#">
-                    <svg class="google" width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <rect width="33.33" height="33.33" rx="2" />
-                      <path
-                        d="M20.9403 11.9923C20.1517 11.2694 18.7687 10.4043 16.7183 10.4043C13.8309 10.4043 11.3802 12.2649 10.4945 14.8364C10.2761 15.5001 10.1427 16.2111 10.1427 16.9459C10.1427 17.6806 10.2761 18.3917 10.5066 19.0553C11.3802 21.6269 13.8309 23.4874 16.7183 23.4874C18.344 23.4874 19.5815 23.0489 20.5036 22.4208C21.9595 21.4254 22.6146 19.9441 22.7359 18.9605H16.7183V15.0024H26.9701C27.1277 15.666 27.2006 16.3059 27.2006 17.1829C27.2006 20.4299 26.0116 23.1675 23.9491 25.028C22.1414 26.6634 19.6664 27.6115 16.7183 27.6115C12.4477 27.6115 8.75954 25.2176 6.96398 21.7335C6.22395 20.2877 5.79932 18.6642 5.79932 16.9459C5.79932 15.2275 6.22395 13.604 6.96398 12.1582C8.75954 8.67409 12.4477 6.28027 16.7183 6.28027C19.6664 6.28027 22.1293 7.33499 24.0219 9.05333L20.9403 11.9923Z"
-                        />
-                    </svg>
-                  </a>
-                </li>
-              </ul>
-
-
             </div>
           </div>
         </div>
@@ -1046,7 +1056,7 @@
               и&nbsp;люди науки, историки, филологи и&nbsp;много других интересных гостей!</p>
           </div>
         </div>
-        <div class="row">
+        <div class="row guests__bottom">
           <ul class="col-8 list guests__list accordion">
             <li class="guests__item ac">
               <h3 class="guests__subtitle  ac-header flex">
@@ -1060,50 +1070,65 @@
               </h3>
               <ul class="list tab-nav  ac-panel flex">
                 <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-1">Сергей Денисов</button>
+                  <ul class="item-list flex">
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-1">Сергей Денисов</button>
+                    </li>
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-2">Матвей Мечников</button>
+                    </li>
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-3">Константин Прусино</button>
+                    </li>
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-4">Иван Калитников</button>
+                    </li>
+                  </ul>
                 </li>
                 <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-2">Евгений Войновский</button>
+                  <ul class="item-list flex">
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-5">Евгений Войновский</button>
+                    </li>
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn tab-nav__btn--active btn-reset text-sm" data-path="tab-6">Ольга Мартынова</button>
+                    </li>
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-7">Дмитрий Михалок</button>
+                    </li>
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-8">Пётр Пиотровский</button>
+                    </li>
+                  </ul>
                 </li>
                 <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-3">Олег Свиридовский</button>
+                  <ul class="item-list flex">
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-9">Олег Свиридовский</button>
+                    </li>
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-10">Владислав Кауперс</button>
+                    </li>
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-11">Михаил Пожитников</button>
+                    </li>
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-12">Георгий Полуян</button>
+                    </li>
+                  </ul>
                 </li>
-                <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-4">Денис Тельман</button>
-                </li>
-                <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-5">Матвей Мечников</button>
-                </li>
-                <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn tab-nav__btn--active btn-reset text-sm" data-path="tab-6">Ольга
-                    Мартынова</button>
-                </li>
-                <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-7">Владислав Кауперс</button>
-                </li>
-                <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-8">Юрий Горин</button>
-                </li>
-                <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-9">Константин Прусино</button>
-                </li>
-                <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-10">Дмитрий Михалок</button>
-                </li>
-                <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-11">Михаил Пожитников</button>
-                </li>
-                <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-12">Максим Сергеев</button>
-                </li>
-                <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-13">Иван Калитников</button>
-                </li>
-                <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-14">Пётр Пиотровский</button>
-                </li>
-                <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-15">Георгий Полуян</button>
+                <li class="tab-nav__item ac-text ac-text--last">
+                  <ul class="item-list item-list--last  flex">
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-13">Денис Тельман</button>
+                    </li>
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-14">Юрий Горин</button>
+                    </li>
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-15">Максим Сергеев</button>
+                    </li>
+                  </ul>
                 </li>
               </ul>
             </li>
@@ -1119,50 +1144,65 @@
               </h3>
               <ul class="list tab-nav  ac-panel flex">
                 <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-1">Сергей Денисов</button>
+                  <ul class="item-list flex">
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-1">Сергей Денисов</button>
+                    </li>
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-2">Матвей Мечников</button>
+                    </li>
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-3">Константин Прусино</button>
+                    </li>
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-4">Иван Калитников</button>
+                    </li>
+                  </ul>
                 </li>
                 <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-2">Евгений Войновский</button>
+                  <ul class="item-list flex">
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-5">Евгений Войновский</button>
+                    </li>
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn tab-nav__btn--active btn-reset text-sm" data-path="tab-6">Ольга Мартынова</button>
+                    </li>
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-7">Дмитрий Михалок</button>
+                    </li>
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-8">Пётр Пиотровский</button>
+                    </li>
+                  </ul>
                 </li>
                 <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-3">Олег Свиридовский</button>
+                  <ul class="item-list flex">
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-9">Олег Свиридовский</button>
+                    </li>
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-10">Владислав Кауперс</button>
+                    </li>
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-11">Михаил Пожитников</button>
+                    </li>
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-12">Георгий Полуян</button>
+                    </li>
+                  </ul>
                 </li>
-                <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-4">Денис Тельман</button>
-                </li>
-                <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-5">Матвей Мечников</button>
-                </li>
-                <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn tab-nav__btn--active btn-reset text-sm" data-path="tab-6">Ольга
-                    Мартынова</button>
-                </li>
-                <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-7">Владислав Кауперс</button>
-                </li>
-                <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-8">Юрий Горин</button>
-                </li>
-                <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-9">Константин Прусино</button>
-                </li>
-                <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-10">Дмитрий Михалок</button>
-                </li>
-                <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-11">Михаил Пожитников</button>
-                </li>
-                <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-12">Максим Сергеев</button>
-                </li>
-                <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-13">Иван Калитников</button>
-                </li>
-                <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-14">Пётр Пиотровский</button>
-                </li>
-                <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-15">Георгий Полуян</button>
+                <li class="tab-nav__item ac-text ac-text--last">
+                  <ul class="item-list item-list--last  flex">
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-13">Денис Тельман</button>
+                    </li>
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-14">Юрий Горин</button>
+                    </li>
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-15">Максим Сергеев</button>
+                    </li>
+                  </ul>
                 </li>
               </ul>
             </li>
@@ -1178,50 +1218,65 @@
               </h3>
               <ul class="list tab-nav  ac-panel flex">
                 <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-1">Сергей Денисов</button>
+                  <ul class="item-list flex">
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-1">Сергей Денисов</button>
+                    </li>
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-2">Матвей Мечников</button>
+                    </li>
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-3">Константин Прусино</button>
+                    </li>
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-4">Иван Калитников</button>
+                    </li>
+                  </ul>
                 </li>
                 <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-2">Евгений Войновский</button>
+                  <ul class="item-list flex">
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-5">Евгений Войновский</button>
+                    </li>
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn tab-nav__btn--active btn-reset text-sm" data-path="tab-6">Ольга Мартынова</button>
+                    </li>
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-7">Дмитрий Михалок</button>
+                    </li>
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-8">Пётр Пиотровский</button>
+                    </li>
+                  </ul>
                 </li>
                 <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-3">Олег Свиридовский</button>
+                  <ul class="item-list flex">
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-9">Олег Свиридовский</button>
+                    </li>
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-10">Владислав Кауперс</button>
+                    </li>
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-11">Михаил Пожитников</button>
+                    </li>
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-12">Георгий Полуян</button>
+                    </li>
+                  </ul>
                 </li>
-                <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-4">Денис Тельман</button>
-                </li>
-                <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-5">Матвей Мечников</button>
-                </li>
-                <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn tab-nav__btn--active btn-reset text-sm" data-path="tab-6">Ольга
-                    Мартынова</button>
-                </li>
-                <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-7">Владислав Кауперс</button>
-                </li>
-                <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-8">Юрий Горин</button>
-                </li>
-                <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-9">Константин Прусино</button>
-                </li>
-                <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-10">Дмитрий Михалок</button>
-                </li>
-                <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-11">Михаил Пожитников</button>
-                </li>
-                <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-12">Максим Сергеев</button>
-                </li>
-                <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-13">Иван Калитников</button>
-                </li>
-                <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-14">Пётр Пиотровский</button>
-                </li>
-                <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-15">Георгий Полуян</button>
+                <li class="tab-nav__item ac-text ac-text--last">
+                  <ul class="item-list item-list--last  flex">
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-13">Денис Тельман</button>
+                    </li>
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-14">Юрий Горин</button>
+                    </li>
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-15">Максим Сергеев</button>
+                    </li>
+                  </ul>
                 </li>
               </ul>
             </li>
@@ -1237,50 +1292,65 @@
               </h3>
               <ul class="list tab-nav  ac-panel flex">
                 <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-1">Сергей Денисов</button>
+                  <ul class="item-list flex">
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-1">Сергей Денисов</button>
+                    </li>
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-2">Матвей Мечников</button>
+                    </li>
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-3">Константин Прусино</button>
+                    </li>
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-4">Иван Калитников</button>
+                    </li>
+                  </ul>
                 </li>
                 <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-2">Евгений Войновский</button>
+                  <ul class="item-list flex">
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-5">Евгений Войновский</button>
+                    </li>
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn tab-nav__btn--active btn-reset text-sm" data-path="tab-6">Ольга Мартынова</button>
+                    </li>
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-7">Дмитрий Михалок</button>
+                    </li>
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-8">Пётр Пиотровский</button>
+                    </li>
+                  </ul>
                 </li>
                 <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-3">Олег Свиридовский</button>
+                  <ul class="item-list flex">
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-9">Олег Свиридовский</button>
+                    </li>
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-10">Владислав Кауперс</button>
+                    </li>
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-11">Михаил Пожитников</button>
+                    </li>
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-12">Георгий Полуян</button>
+                    </li>
+                  </ul>
                 </li>
-                <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-4">Денис Тельман</button>
-                </li>
-                <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-5">Матвей Мечников</button>
-                </li>
-                <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn tab-nav__btn--active btn-reset text-sm" data-path="tab-6">Ольга
-                    Мартынова</button>
-                </li>
-                <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-7">Владислав Кауперс</button>
-                </li>
-                <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-8">Юрий Горин</button>
-                </li>
-                <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-9">Константин Прусино</button>
-                </li>
-                <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-10">Дмитрий Михалок</button>
-                </li>
-                <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-11">Михаил Пожитников</button>
-                </li>
-                <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-12">Максим Сергеев</button>
-                </li>
-                <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-13">Иван Калитников</button>
-                </li>
-                <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-14">Пётр Пиотровский</button>
-                </li>
-                <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-15">Георгий Полуян</button>
+                <li class="tab-nav__item ac-text ac-text--last">
+                  <ul class="item-list item-list--last  flex">
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-13">Денис Тельман</button>
+                    </li>
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-14">Юрий Горин</button>
+                    </li>
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-15">Максим Сергеев</button>
+                    </li>
+                  </ul>
                 </li>
               </ul>
             </li>
@@ -1296,50 +1366,65 @@
               </h3>
               <ul class="list tab-nav  ac-panel flex">
                 <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-1">Сергей Денисов</button>
+                  <ul class="item-list flex">
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-1">Сергей Денисов</button>
+                    </li>
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-2">Матвей Мечников</button>
+                    </li>
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-3">Константин Прусино</button>
+                    </li>
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-4">Иван Калитников</button>
+                    </li>
+                  </ul>
                 </li>
                 <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-2">Евгений Войновский</button>
+                  <ul class="item-list flex">
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-5">Евгений Войновский</button>
+                    </li>
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn tab-nav__btn--active btn-reset text-sm" data-path="tab-6">Ольга Мартынова</button>
+                    </li>
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-7">Дмитрий Михалок</button>
+                    </li>
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-8">Пётр Пиотровский</button>
+                    </li>
+                  </ul>
                 </li>
                 <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-3">Олег Свиридовский</button>
+                  <ul class="item-list flex">
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-9">Олег Свиридовский</button>
+                    </li>
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-10">Владислав Кауперс</button>
+                    </li>
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-11">Михаил Пожитников</button>
+                    </li>
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-12">Георгий Полуян</button>
+                    </li>
+                  </ul>
                 </li>
-                <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-4">Денис Тельман</button>
-                </li>
-                <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-5">Матвей Мечников</button>
-                </li>
-                <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn tab-nav__btn--active btn-reset text-sm" data-path="tab-6">Ольга
-                    Мартынова</button>
-                </li>
-                <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-7">Владислав Кауперс</button>
-                </li>
-                <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-8">Юрий Горин</button>
-                </li>
-                <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-9">Константин Прусино</button>
-                </li>
-                <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-10">Дмитрий Михалок</button>
-                </li>
-                <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-11">Михаил Пожитников</button>
-                </li>
-                <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-12">Максим Сергеев</button>
-                </li>
-                <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-13">Иван Калитников</button>
-                </li>
-                <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-14">Пётр Пиотровский</button>
-                </li>
-                <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-15">Георгий Полуян</button>
+                <li class="tab-nav__item ac-text ac-text--last">
+                  <ul class="item-list item-list--last  flex">
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-13">Денис Тельман</button>
+                    </li>
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-14">Юрий Горин</button>
+                    </li>
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-15">Максим Сергеев</button>
+                    </li>
+                  </ul>
                 </li>
               </ul>
             </li>
@@ -1355,50 +1440,65 @@
               </h3>
               <ul class="list tab-nav  ac-panel flex">
                 <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-1">Сергей Денисов</button>
+                  <ul class="item-list flex">
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-1">Сергей Денисов</button>
+                    </li>
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-2">Матвей Мечников</button>
+                    </li>
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-3">Константин Прусино</button>
+                    </li>
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-4">Иван Калитников</button>
+                    </li>
+                  </ul>
                 </li>
                 <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-2">Евгений Войновский</button>
+                  <ul class="item-list flex">
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-5">Евгений Войновский</button>
+                    </li>
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn tab-nav__btn--active  btn-reset text-sm" data-path="tab-6">Ольга Мартынова</button>
+                    </li>
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-7">Дмитрий Михалок</button>
+                    </li>
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-8">Пётр Пиотровский</button>
+                    </li>
+                  </ul>
                 </li>
                 <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-3">Олег Свиридовский</button>
+                  <ul class="item-list flex">
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-9">Олег Свиридовский</button>
+                    </li>
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-10">Владислав Кауперс</button>
+                    </li>
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-11">Михаил Пожитников</button>
+                    </li>
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-12">Георгий Полуян</button>
+                    </li>
+                  </ul>
                 </li>
-                <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-4">Денис Тельман</button>
-                </li>
-                <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-5">Матвей Мечников</button>
-                </li>
-                <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn tab-nav__btn--active btn-reset text-sm" data-path="tab-6">Ольга
-                    Мартынова</button>
-                </li>
-                <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-7">Владислав Кауперс</button>
-                </li>
-                <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-8">Юрий Горин</button>
-                </li>
-                <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-9">Константин Прусино</button>
-                </li>
-                <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-10">Дмитрий Михалок</button>
-                </li>
-                <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-11">Михаил Пожитников</button>
-                </li>
-                <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-12">Максим Сергеев</button>
-                </li>
-                <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-13">Иван Калитников</button>
-                </li>
-                <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-14">Пётр Пиотровский</button>
-                </li>
-                <li class="tab-nav__item ac-text">
-                  <button class="tab-nav__btn btn-reset text-sm" data-path="tab-15">Георгий Полуян</button>
+                <li class="tab-nav__item ac-text ac-text--last">
+                  <ul class="item-list item-list--last  flex">
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-13">Денис Тельман</button>
+                    </li>
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-14">Юрий Горин</button>
+                    </li>
+                    <li class="item-list__item">
+                      <button class="tab-nav__btn btn-reset text-sm" data-path="tab-15">Максим Сергеев</button>
+                    </li>
+                  </ul>
                 </li>
               </ul>
             </li>
@@ -1427,7 +1527,7 @@
                 </li>
                 <li class="social-list__item">
                   <a class="social-list__link" href="#">
-                    <svg class="instagram" width="22" height="18" viewBox="0 0 22 18" fill="none"
+                    <svg class="twitter" width="22" height="18" viewBox="0 0 22 18" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M21.1621 2.65593C20.3986 2.99362 19.589 3.2154 18.7601 3.31393C19.6338 2.79136 20.2878 1.96894 20.6001 0.999927C19.7801 1.48793 18.8811 1.82993 17.9441 2.01493C17.3147 1.34151 16.4804 0.89489 15.571 0.744511C14.6616 0.594133 13.728 0.748418 12.9153 1.18338C12.1026 1.61834 11.4564 2.30961 11.0772 3.14972C10.6979 3.98983 10.6068 4.93171 10.8181 5.82893C9.15516 5.74558 7.52838 5.31345 6.04334 4.56059C4.55829 3.80773 3.24818 2.75097 2.19805 1.45893C1.82634 2.09738 1.63101 2.82315 1.63205 3.56193C1.63205 5.01193 2.37005 6.29293 3.49205 7.04293C2.82806 7.02202 2.17869 6.84271 1.59805 6.51993V6.57193C1.59825 7.53763 1.93242 8.47354 2.5439 9.22099C3.15538 9.96843 4.00653 10.4814 4.95305 10.6729C4.33667 10.84 3.69036 10.8646 3.06305 10.7449C3.32992 11.5762 3.85006 12.3031 4.55064 12.824C5.25123 13.3449 6.09718 13.6337 6.97005 13.6499C6.10253 14.3313 5.10923 14.8349 4.04693 15.1321C2.98464 15.4293 1.87418 15.5142 0.779053 15.3819C2.69075 16.6114 4.91615 17.264 7.18905 17.2619C14.8821 17.2619 19.0891 10.8889 19.0891 5.36193C19.0891 5.18193 19.0841 4.99993 19.0761 4.82193C19.8949 4.23009 20.6017 3.49695 21.1631 2.65693L21.1621 2.65593Z" />
@@ -1465,7 +1565,7 @@
                 </li>
                 <li class="social-list__item">
                   <a class="social-list__link" href="#">
-                    <svg class="instagram" width="22" height="18" viewBox="0 0 22 18" fill="none"
+                    <svg class="twitter" width="22" height="18" viewBox="0 0 22 18" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M21.1621 2.65593C20.3986 2.99362 19.589 3.2154 18.7601 3.31393C19.6338 2.79136 20.2878 1.96894 20.6001 0.999927C19.7801 1.48793 18.8811 1.82993 17.9441 2.01493C17.3147 1.34151 16.4804 0.89489 15.571 0.744511C14.6616 0.594133 13.728 0.748418 12.9153 1.18338C12.1026 1.61834 11.4564 2.30961 11.0772 3.14972C10.6979 3.98983 10.6068 4.93171 10.8181 5.82893C9.15516 5.74558 7.52838 5.31345 6.04334 4.56059C4.55829 3.80773 3.24818 2.75097 2.19805 1.45893C1.82634 2.09738 1.63101 2.82315 1.63205 3.56193C1.63205 5.01193 2.37005 6.29293 3.49205 7.04293C2.82806 7.02202 2.17869 6.84271 1.59805 6.51993V6.57193C1.59825 7.53763 1.93242 8.47354 2.5439 9.22099C3.15538 9.96843 4.00653 10.4814 4.95305 10.6729C4.33667 10.84 3.69036 10.8646 3.06305 10.7449C3.32992 11.5762 3.85006 12.3031 4.55064 12.824C5.25123 13.3449 6.09718 13.6337 6.97005 13.6499C6.10253 14.3313 5.10923 14.8349 4.04693 15.1321C2.98464 15.4293 1.87418 15.5142 0.779053 15.3819C2.69075 16.6114 4.91615 17.264 7.18905 17.2619C14.8821 17.2619 19.0891 10.8889 19.0891 5.36193C19.0891 5.18193 19.0841 4.99993 19.0761 4.82193C19.8949 4.23009 20.6017 3.49695 21.1631 2.65693L21.1621 2.65593Z" />
@@ -1503,7 +1603,7 @@
                 </li>
                 <li class="social-list__item">
                   <a class="social-list__link" href="#">
-                    <svg class="instagram" width="22" height="18" viewBox="0 0 22 18" fill="none"
+                    <svg class="twitter" width="22" height="18" viewBox="0 0 22 18" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M21.1621 2.65593C20.3986 2.99362 19.589 3.2154 18.7601 3.31393C19.6338 2.79136 20.2878 1.96894 20.6001 0.999927C19.7801 1.48793 18.8811 1.82993 17.9441 2.01493C17.3147 1.34151 16.4804 0.89489 15.571 0.744511C14.6616 0.594133 13.728 0.748418 12.9153 1.18338C12.1026 1.61834 11.4564 2.30961 11.0772 3.14972C10.6979 3.98983 10.6068 4.93171 10.8181 5.82893C9.15516 5.74558 7.52838 5.31345 6.04334 4.56059C4.55829 3.80773 3.24818 2.75097 2.19805 1.45893C1.82634 2.09738 1.63101 2.82315 1.63205 3.56193C1.63205 5.01193 2.37005 6.29293 3.49205 7.04293C2.82806 7.02202 2.17869 6.84271 1.59805 6.51993V6.57193C1.59825 7.53763 1.93242 8.47354 2.5439 9.22099C3.15538 9.96843 4.00653 10.4814 4.95305 10.6729C4.33667 10.84 3.69036 10.8646 3.06305 10.7449C3.32992 11.5762 3.85006 12.3031 4.55064 12.824C5.25123 13.3449 6.09718 13.6337 6.97005 13.6499C6.10253 14.3313 5.10923 14.8349 4.04693 15.1321C2.98464 15.4293 1.87418 15.5142 0.779053 15.3819C2.69075 16.6114 4.91615 17.264 7.18905 17.2619C14.8821 17.2619 19.0891 10.8889 19.0891 5.36193C19.0891 5.18193 19.0841 4.99993 19.0761 4.82193C19.8949 4.23009 20.6017 3.49695 21.1631 2.65693L21.1621 2.65593Z" />
@@ -1541,7 +1641,7 @@
                 </li>
                 <li class="social-list__item">
                   <a class="social-list__link" href="#">
-                    <svg class="instagram" width="22" height="18" viewBox="0 0 22 18" fill="none"
+                    <svg class="twitter" width="22" height="18" viewBox="0 0 22 18" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M21.1621 2.65593C20.3986 2.99362 19.589 3.2154 18.7601 3.31393C19.6338 2.79136 20.2878 1.96894 20.6001 0.999927C19.7801 1.48793 18.8811 1.82993 17.9441 2.01493C17.3147 1.34151 16.4804 0.89489 15.571 0.744511C14.6616 0.594133 13.728 0.748418 12.9153 1.18338C12.1026 1.61834 11.4564 2.30961 11.0772 3.14972C10.6979 3.98983 10.6068 4.93171 10.8181 5.82893C9.15516 5.74558 7.52838 5.31345 6.04334 4.56059C4.55829 3.80773 3.24818 2.75097 2.19805 1.45893C1.82634 2.09738 1.63101 2.82315 1.63205 3.56193C1.63205 5.01193 2.37005 6.29293 3.49205 7.04293C2.82806 7.02202 2.17869 6.84271 1.59805 6.51993V6.57193C1.59825 7.53763 1.93242 8.47354 2.5439 9.22099C3.15538 9.96843 4.00653 10.4814 4.95305 10.6729C4.33667 10.84 3.69036 10.8646 3.06305 10.7449C3.32992 11.5762 3.85006 12.3031 4.55064 12.824C5.25123 13.3449 6.09718 13.6337 6.97005 13.6499C6.10253 14.3313 5.10923 14.8349 4.04693 15.1321C2.98464 15.4293 1.87418 15.5142 0.779053 15.3819C2.69075 16.6114 4.91615 17.264 7.18905 17.2619C14.8821 17.2619 19.0891 10.8889 19.0891 5.36193C19.0891 5.18193 19.0841 4.99993 19.0761 4.82193C19.8949 4.23009 20.6017 3.49695 21.1631 2.65693L21.1621 2.65593Z" />
@@ -1579,7 +1679,7 @@
                 </li>
                 <li class="social-list__item">
                   <a class="social-list__link" href="#">
-                    <svg class="instagram" width="22" height="18" viewBox="0 0 22 18" fill="none"
+                    <svg class="twitter" width="22" height="18" viewBox="0 0 22 18" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M21.1621 2.65593C20.3986 2.99362 19.589 3.2154 18.7601 3.31393C19.6338 2.79136 20.2878 1.96894 20.6001 0.999927C19.7801 1.48793 18.8811 1.82993 17.9441 2.01493C17.3147 1.34151 16.4804 0.89489 15.571 0.744511C14.6616 0.594133 13.728 0.748418 12.9153 1.18338C12.1026 1.61834 11.4564 2.30961 11.0772 3.14972C10.6979 3.98983 10.6068 4.93171 10.8181 5.82893C9.15516 5.74558 7.52838 5.31345 6.04334 4.56059C4.55829 3.80773 3.24818 2.75097 2.19805 1.45893C1.82634 2.09738 1.63101 2.82315 1.63205 3.56193C1.63205 5.01193 2.37005 6.29293 3.49205 7.04293C2.82806 7.02202 2.17869 6.84271 1.59805 6.51993V6.57193C1.59825 7.53763 1.93242 8.47354 2.5439 9.22099C3.15538 9.96843 4.00653 10.4814 4.95305 10.6729C4.33667 10.84 3.69036 10.8646 3.06305 10.7449C3.32992 11.5762 3.85006 12.3031 4.55064 12.824C5.25123 13.3449 6.09718 13.6337 6.97005 13.6499C6.10253 14.3313 5.10923 14.8349 4.04693 15.1321C2.98464 15.4293 1.87418 15.5142 0.779053 15.3819C2.69075 16.6114 4.91615 17.264 7.18905 17.2619C14.8821 17.2619 19.0891 10.8889 19.0891 5.36193C19.0891 5.18193 19.0841 4.99993 19.0761 4.82193C19.8949 4.23009 20.6017 3.49695 21.1631 2.65693L21.1621 2.65593Z" />
@@ -1617,7 +1717,7 @@
                 </li>
                 <li class="social-list__item">
                   <a class="social-list__link" href="#">
-                    <svg class="instagram" width="22" height="18" viewBox="0 0 22 18" fill="none"
+                    <svg class="twitter" width="22" height="18" viewBox="0 0 22 18" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M21.1621 2.65593C20.3986 2.99362 19.589 3.2154 18.7601 3.31393C19.6338 2.79136 20.2878 1.96894 20.6001 0.999927C19.7801 1.48793 18.8811 1.82993 17.9441 2.01493C17.3147 1.34151 16.4804 0.89489 15.571 0.744511C14.6616 0.594133 13.728 0.748418 12.9153 1.18338C12.1026 1.61834 11.4564 2.30961 11.0772 3.14972C10.6979 3.98983 10.6068 4.93171 10.8181 5.82893C9.15516 5.74558 7.52838 5.31345 6.04334 4.56059C4.55829 3.80773 3.24818 2.75097 2.19805 1.45893C1.82634 2.09738 1.63101 2.82315 1.63205 3.56193C1.63205 5.01193 2.37005 6.29293 3.49205 7.04293C2.82806 7.02202 2.17869 6.84271 1.59805 6.51993V6.57193C1.59825 7.53763 1.93242 8.47354 2.5439 9.22099C3.15538 9.96843 4.00653 10.4814 4.95305 10.6729C4.33667 10.84 3.69036 10.8646 3.06305 10.7449C3.32992 11.5762 3.85006 12.3031 4.55064 12.824C5.25123 13.3449 6.09718 13.6337 6.97005 13.6499C6.10253 14.3313 5.10923 14.8349 4.04693 15.1321C2.98464 15.4293 1.87418 15.5142 0.779053 15.3819C2.69075 16.6114 4.91615 17.264 7.18905 17.2619C14.8821 17.2619 19.0891 10.8889 19.0891 5.36193C19.0891 5.18193 19.0841 4.99993 19.0761 4.82193C19.8949 4.23009 20.6017 3.49695 21.1631 2.65693L21.1621 2.65593Z" />
@@ -1693,7 +1793,7 @@
                 </li>
                 <li class="social-list__item">
                   <a class="social-list__link" href="#">
-                    <svg class="instagram" width="22" height="18" viewBox="0 0 22 18" fill="none"
+                    <svg class="twitter" width="22" height="18" viewBox="0 0 22 18" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M21.1621 2.65593C20.3986 2.99362 19.589 3.2154 18.7601 3.31393C19.6338 2.79136 20.2878 1.96894 20.6001 0.999927C19.7801 1.48793 18.8811 1.82993 17.9441 2.01493C17.3147 1.34151 16.4804 0.89489 15.571 0.744511C14.6616 0.594133 13.728 0.748418 12.9153 1.18338C12.1026 1.61834 11.4564 2.30961 11.0772 3.14972C10.6979 3.98983 10.6068 4.93171 10.8181 5.82893C9.15516 5.74558 7.52838 5.31345 6.04334 4.56059C4.55829 3.80773 3.24818 2.75097 2.19805 1.45893C1.82634 2.09738 1.63101 2.82315 1.63205 3.56193C1.63205 5.01193 2.37005 6.29293 3.49205 7.04293C2.82806 7.02202 2.17869 6.84271 1.59805 6.51993V6.57193C1.59825 7.53763 1.93242 8.47354 2.5439 9.22099C3.15538 9.96843 4.00653 10.4814 4.95305 10.6729C4.33667 10.84 3.69036 10.8646 3.06305 10.7449C3.32992 11.5762 3.85006 12.3031 4.55064 12.824C5.25123 13.3449 6.09718 13.6337 6.97005 13.6499C6.10253 14.3313 5.10923 14.8349 4.04693 15.1321C2.98464 15.4293 1.87418 15.5142 0.779053 15.3819C2.69075 16.6114 4.91615 17.264 7.18905 17.2619C14.8821 17.2619 19.0891 10.8889 19.0891 5.36193C19.0891 5.18193 19.0841 4.99993 19.0761 4.82193C19.8949 4.23009 20.6017 3.49695 21.1631 2.65693L21.1621 2.65593Z" />
@@ -1731,7 +1831,7 @@
                 </li>
                 <li class="social-list__item">
                   <a class="social-list__link" href="#">
-                    <svg class="instagram" width="22" height="18" viewBox="0 0 22 18" fill="none"
+                    <svg class="twitter" width="22" height="18" viewBox="0 0 22 18" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M21.1621 2.65593C20.3986 2.99362 19.589 3.2154 18.7601 3.31393C19.6338 2.79136 20.2878 1.96894 20.6001 0.999927C19.7801 1.48793 18.8811 1.82993 17.9441 2.01493C17.3147 1.34151 16.4804 0.89489 15.571 0.744511C14.6616 0.594133 13.728 0.748418 12.9153 1.18338C12.1026 1.61834 11.4564 2.30961 11.0772 3.14972C10.6979 3.98983 10.6068 4.93171 10.8181 5.82893C9.15516 5.74558 7.52838 5.31345 6.04334 4.56059C4.55829 3.80773 3.24818 2.75097 2.19805 1.45893C1.82634 2.09738 1.63101 2.82315 1.63205 3.56193C1.63205 5.01193 2.37005 6.29293 3.49205 7.04293C2.82806 7.02202 2.17869 6.84271 1.59805 6.51993V6.57193C1.59825 7.53763 1.93242 8.47354 2.5439 9.22099C3.15538 9.96843 4.00653 10.4814 4.95305 10.6729C4.33667 10.84 3.69036 10.8646 3.06305 10.7449C3.32992 11.5762 3.85006 12.3031 4.55064 12.824C5.25123 13.3449 6.09718 13.6337 6.97005 13.6499C6.10253 14.3313 5.10923 14.8349 4.04693 15.1321C2.98464 15.4293 1.87418 15.5142 0.779053 15.3819C2.69075 16.6114 4.91615 17.264 7.18905 17.2619C14.8821 17.2619 19.0891 10.8889 19.0891 5.36193C19.0891 5.18193 19.0841 4.99993 19.0761 4.82193C19.8949 4.23009 20.6017 3.49695 21.1631 2.65693L21.1621 2.65593Z" />
@@ -1769,7 +1869,7 @@
                 </li>
                 <li class="social-list__item">
                   <a class="social-list__link" href="#">
-                    <svg class="instagram" width="22" height="18" viewBox="0 0 22 18" fill="none"
+                    <svg class="twitter" width="22" height="18" viewBox="0 0 22 18" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M21.1621 2.65593C20.3986 2.99362 19.589 3.2154 18.7601 3.31393C19.6338 2.79136 20.2878 1.96894 20.6001 0.999927C19.7801 1.48793 18.8811 1.82993 17.9441 2.01493C17.3147 1.34151 16.4804 0.89489 15.571 0.744511C14.6616 0.594133 13.728 0.748418 12.9153 1.18338C12.1026 1.61834 11.4564 2.30961 11.0772 3.14972C10.6979 3.98983 10.6068 4.93171 10.8181 5.82893C9.15516 5.74558 7.52838 5.31345 6.04334 4.56059C4.55829 3.80773 3.24818 2.75097 2.19805 1.45893C1.82634 2.09738 1.63101 2.82315 1.63205 3.56193C1.63205 5.01193 2.37005 6.29293 3.49205 7.04293C2.82806 7.02202 2.17869 6.84271 1.59805 6.51993V6.57193C1.59825 7.53763 1.93242 8.47354 2.5439 9.22099C3.15538 9.96843 4.00653 10.4814 4.95305 10.6729C4.33667 10.84 3.69036 10.8646 3.06305 10.7449C3.32992 11.5762 3.85006 12.3031 4.55064 12.824C5.25123 13.3449 6.09718 13.6337 6.97005 13.6499C6.10253 14.3313 5.10923 14.8349 4.04693 15.1321C2.98464 15.4293 1.87418 15.5142 0.779053 15.3819C2.69075 16.6114 4.91615 17.264 7.18905 17.2619C14.8821 17.2619 19.0891 10.8889 19.0891 5.36193C19.0891 5.18193 19.0841 4.99993 19.0761 4.82193C19.8949 4.23009 20.6017 3.49695 21.1631 2.65693L21.1621 2.65593Z" />
@@ -1807,7 +1907,7 @@
                 </li>
                 <li class="social-list__item">
                   <a class="social-list__link" href="#">
-                    <svg class="instagram" width="22" height="18" viewBox="0 0 22 18" fill="none"
+                    <svg class="twitter" width="22" height="18" viewBox="0 0 22 18" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M21.1621 2.65593C20.3986 2.99362 19.589 3.2154 18.7601 3.31393C19.6338 2.79136 20.2878 1.96894 20.6001 0.999927C19.7801 1.48793 18.8811 1.82993 17.9441 2.01493C17.3147 1.34151 16.4804 0.89489 15.571 0.744511C14.6616 0.594133 13.728 0.748418 12.9153 1.18338C12.1026 1.61834 11.4564 2.30961 11.0772 3.14972C10.6979 3.98983 10.6068 4.93171 10.8181 5.82893C9.15516 5.74558 7.52838 5.31345 6.04334 4.56059C4.55829 3.80773 3.24818 2.75097 2.19805 1.45893C1.82634 2.09738 1.63101 2.82315 1.63205 3.56193C1.63205 5.01193 2.37005 6.29293 3.49205 7.04293C2.82806 7.02202 2.17869 6.84271 1.59805 6.51993V6.57193C1.59825 7.53763 1.93242 8.47354 2.5439 9.22099C3.15538 9.96843 4.00653 10.4814 4.95305 10.6729C4.33667 10.84 3.69036 10.8646 3.06305 10.7449C3.32992 11.5762 3.85006 12.3031 4.55064 12.824C5.25123 13.3449 6.09718 13.6337 6.97005 13.6499C6.10253 14.3313 5.10923 14.8349 4.04693 15.1321C2.98464 15.4293 1.87418 15.5142 0.779053 15.3819C2.69075 16.6114 4.91615 17.264 7.18905 17.2619C14.8821 17.2619 19.0891 10.8889 19.0891 5.36193C19.0891 5.18193 19.0841 4.99993 19.0761 4.82193C19.8949 4.23009 20.6017 3.49695 21.1631 2.65693L21.1621 2.65593Z" />
@@ -1845,7 +1945,7 @@
                 </li>
                 <li class="social-list__item">
                   <a class="social-list__link" href="#">
-                    <svg class="instagram" width="22" height="18" viewBox="0 0 22 18" fill="none"
+                    <svg class="twitter" width="22" height="18" viewBox="0 0 22 18" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M21.1621 2.65593C20.3986 2.99362 19.589 3.2154 18.7601 3.31393C19.6338 2.79136 20.2878 1.96894 20.6001 0.999927C19.7801 1.48793 18.8811 1.82993 17.9441 2.01493C17.3147 1.34151 16.4804 0.89489 15.571 0.744511C14.6616 0.594133 13.728 0.748418 12.9153 1.18338C12.1026 1.61834 11.4564 2.30961 11.0772 3.14972C10.6979 3.98983 10.6068 4.93171 10.8181 5.82893C9.15516 5.74558 7.52838 5.31345 6.04334 4.56059C4.55829 3.80773 3.24818 2.75097 2.19805 1.45893C1.82634 2.09738 1.63101 2.82315 1.63205 3.56193C1.63205 5.01193 2.37005 6.29293 3.49205 7.04293C2.82806 7.02202 2.17869 6.84271 1.59805 6.51993V6.57193C1.59825 7.53763 1.93242 8.47354 2.5439 9.22099C3.15538 9.96843 4.00653 10.4814 4.95305 10.6729C4.33667 10.84 3.69036 10.8646 3.06305 10.7449C3.32992 11.5762 3.85006 12.3031 4.55064 12.824C5.25123 13.3449 6.09718 13.6337 6.97005 13.6499C6.10253 14.3313 5.10923 14.8349 4.04693 15.1321C2.98464 15.4293 1.87418 15.5142 0.779053 15.3819C2.69075 16.6114 4.91615 17.264 7.18905 17.2619C14.8821 17.2619 19.0891 10.8889 19.0891 5.36193C19.0891 5.18193 19.0841 4.99993 19.0761 4.82193C19.8949 4.23009 20.6017 3.49695 21.1631 2.65693L21.1621 2.65593Z" />
@@ -1883,7 +1983,7 @@
                 </li>
                 <li class="social-list__item">
                   <a class="social-list__link" href="#">
-                    <svg class="instagram" width="22" height="18" viewBox="0 0 22 18" fill="none"
+                    <svg class="twitter" width="22" height="18" viewBox="0 0 22 18" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M21.1621 2.65593C20.3986 2.99362 19.589 3.2154 18.7601 3.31393C19.6338 2.79136 20.2878 1.96894 20.6001 0.999927C19.7801 1.48793 18.8811 1.82993 17.9441 2.01493C17.3147 1.34151 16.4804 0.89489 15.571 0.744511C14.6616 0.594133 13.728 0.748418 12.9153 1.18338C12.1026 1.61834 11.4564 2.30961 11.0772 3.14972C10.6979 3.98983 10.6068 4.93171 10.8181 5.82893C9.15516 5.74558 7.52838 5.31345 6.04334 4.56059C4.55829 3.80773 3.24818 2.75097 2.19805 1.45893C1.82634 2.09738 1.63101 2.82315 1.63205 3.56193C1.63205 5.01193 2.37005 6.29293 3.49205 7.04293C2.82806 7.02202 2.17869 6.84271 1.59805 6.51993V6.57193C1.59825 7.53763 1.93242 8.47354 2.5439 9.22099C3.15538 9.96843 4.00653 10.4814 4.95305 10.6729C4.33667 10.84 3.69036 10.8646 3.06305 10.7449C3.32992 11.5762 3.85006 12.3031 4.55064 12.824C5.25123 13.3449 6.09718 13.6337 6.97005 13.6499C6.10253 14.3313 5.10923 14.8349 4.04693 15.1321C2.98464 15.4293 1.87418 15.5142 0.779053 15.3819C2.69075 16.6114 4.91615 17.264 7.18905 17.2619C14.8821 17.2619 19.0891 10.8889 19.0891 5.36193C19.0891 5.18193 19.0841 4.99993 19.0761 4.82193C19.8949 4.23009 20.6017 3.49695 21.1631 2.65693L21.1621 2.65593Z" />
@@ -1921,7 +2021,7 @@
                 </li>
                 <li class="social-list__item">
                   <a class="social-list__link" href="#">
-                    <svg class="instagram" width="22" height="18" viewBox="0 0 22 18" fill="none"
+                    <svg class="twitter" width="22" height="18" viewBox="0 0 22 18" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M21.1621 2.65593C20.3986 2.99362 19.589 3.2154 18.7601 3.31393C19.6338 2.79136 20.2878 1.96894 20.6001 0.999927C19.7801 1.48793 18.8811 1.82993 17.9441 2.01493C17.3147 1.34151 16.4804 0.89489 15.571 0.744511C14.6616 0.594133 13.728 0.748418 12.9153 1.18338C12.1026 1.61834 11.4564 2.30961 11.0772 3.14972C10.6979 3.98983 10.6068 4.93171 10.8181 5.82893C9.15516 5.74558 7.52838 5.31345 6.04334 4.56059C4.55829 3.80773 3.24818 2.75097 2.19805 1.45893C1.82634 2.09738 1.63101 2.82315 1.63205 3.56193C1.63205 5.01193 2.37005 6.29293 3.49205 7.04293C2.82806 7.02202 2.17869 6.84271 1.59805 6.51993V6.57193C1.59825 7.53763 1.93242 8.47354 2.5439 9.22099C3.15538 9.96843 4.00653 10.4814 4.95305 10.6729C4.33667 10.84 3.69036 10.8646 3.06305 10.7449C3.32992 11.5762 3.85006 12.3031 4.55064 12.824C5.25123 13.3449 6.09718 13.6337 6.97005 13.6499C6.10253 14.3313 5.10923 14.8349 4.04693 15.1321C2.98464 15.4293 1.87418 15.5142 0.779053 15.3819C2.69075 16.6114 4.91615 17.264 7.18905 17.2619C14.8821 17.2619 19.0891 10.8889 19.0891 5.36193C19.0891 5.18193 19.0841 4.99993 19.0761 4.82193C19.8949 4.23009 20.6017 3.49695 21.1631 2.65693L21.1621 2.65593Z" />
@@ -1959,7 +2059,7 @@
                 </li>
                 <li class="social-list__item">
                   <a class="social-list__link" href="#">
-                    <svg class="instagram" width="22" height="18" viewBox="0 0 22 18" fill="none"
+                    <svg class="twitter" width="22" height="18" viewBox="0 0 22 18" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M21.1621 2.65593C20.3986 2.99362 19.589 3.2154 18.7601 3.31393C19.6338 2.79136 20.2878 1.96894 20.6001 0.999927C19.7801 1.48793 18.8811 1.82993 17.9441 2.01493C17.3147 1.34151 16.4804 0.89489 15.571 0.744511C14.6616 0.594133 13.728 0.748418 12.9153 1.18338C12.1026 1.61834 11.4564 2.30961 11.0772 3.14972C10.6979 3.98983 10.6068 4.93171 10.8181 5.82893C9.15516 5.74558 7.52838 5.31345 6.04334 4.56059C4.55829 3.80773 3.24818 2.75097 2.19805 1.45893C1.82634 2.09738 1.63101 2.82315 1.63205 3.56193C1.63205 5.01193 2.37005 6.29293 3.49205 7.04293C2.82806 7.02202 2.17869 6.84271 1.59805 6.51993V6.57193C1.59825 7.53763 1.93242 8.47354 2.5439 9.22099C3.15538 9.96843 4.00653 10.4814 4.95305 10.6729C4.33667 10.84 3.69036 10.8646 3.06305 10.7449C3.32992 11.5762 3.85006 12.3031 4.55064 12.824C5.25123 13.3449 6.09718 13.6337 6.97005 13.6499C6.10253 14.3313 5.10923 14.8349 4.04693 15.1321C2.98464 15.4293 1.87418 15.5142 0.779053 15.3819C2.69075 16.6114 4.91615 17.264 7.18905 17.2619C14.8821 17.2619 19.0891 10.8889 19.0891 5.36193C19.0891 5.18193 19.0841 4.99993 19.0761 4.82193C19.8949 4.23009 20.6017 3.49695 21.1631 2.65693L21.1621 2.65593Z" />
@@ -1980,83 +2080,87 @@
     </section>
     <section class="playlists" id="playlists">
       <div class="container playlists__container">
-        <div class="row playlists__wrapper flex">
-          <div class="col-4 playlists__left">
+        <div class="row playlists__wrapper">
+          <div class="col-4 playlists__left ">
             <h2 class="title-2 playlists__title">Плейлисты</h2>
             <h4 class="playlists__radio-title title-4">Жанр</h4>
             <form class="playlists-radio flex" aria-label="Выбрать жанр">
-              <label class="playlists-radio__lbl text-lg" for="radio-btn-1" tabindex="0">
-                <input class="playlists-radio__input" type="radio" name="radio" id="radio-btn-1" checked>
-                <span class="playlists-radio__btn">
-                  <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="13" cy="13" r="12" stroke-width="2" />
-                  </svg>
-                </span>
-                Постпанк
-              </label>
-              <label class="playlists-radio__lbl text-lg" for="radio-btn-2" tabindex="0">
-                <input class="playlists-radio__input" type="radio" name="radio" id="radio-btn-2">
-                <span class="playlists-radio__btn">
-                  <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="13" cy="13" r="12" stroke-width="2" />
-                  </svg>
-                </span>
-                Хардкор
-              </label>
-              <label class="playlists-radio__lbl text-lg" for="radio-btn-3" tabindex="0">
-                <input class="playlists-radio__input" type="radio" name="radio" id="radio-btn-3">
-                <span class="playlists-radio__btn">
-                  <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="13" cy="13" r="12" stroke-width="2" />
-                  </svg>
-                </span>
-                Панк-рок
-              </label>
-              <label class="playlists-radio__lbl text-lg" for="radio-btn-4" tabindex="0">
-                <input class="playlists-radio__input" type="radio" name="radio" id="radio-btn-4">
-                <span class="playlists-radio__btn">
-                  <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="13" cy="13" r="12" stroke-width="2" />
-                  </svg>
-                </span>
-                Рок
-              </label>
-              <label class="playlists-radio__lbl text-lg" for="radio-btn-5" tabindex="0">
-                <input class="playlists-radio__input" type="radio" name="radio" id="radio-btn-5">
-                <span class="playlists-radio__btn">
-                  <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="13" cy="13" r="12" stroke-width="2" />
-                  </svg>
-                </span>
-                Прогрессивный рок
-              </label>
-              <label class="playlists-radio__lbl text-lg" for="radio-btn-6" tabindex="0">
-                <input class="playlists-radio__input" type="radio" name="radio" id="radio-btn-6">
-                <span class="playlists-radio__btn">
-                  <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="13" cy="13" r="12" stroke-width="2" />
-                  </svg>
-                </span>
-                Электронная музыка
-              </label>
-              <label class="playlists-radio__lbl text-lg" for="radio-btn-7" tabindex="0">
-                <input class="playlists-radio__input" type="radio" name="radio" id="radio-btn-7">
-                <span class="playlists-radio__btn">
-                  <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="13" cy="13" r="12" stroke-width="2" />
-                  </svg>
-                </span>
-                Классическая музыка
-              </label>
-              <label class="playlists-radio__lbl text-lg" for="radio-btn-8" tabindex="0">
-                <input class="playlists-radio__input" type="radio" name="radio" id="radio-btn-8">
-                <span class="playlists-radio__btn">
-                  <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="13" cy="13" r="12" stroke-width="2" />
-                  </svg>
-                </span>
-                Звуки природы и&nbsp;шум города
-              </label>
+              <div class="playlists-radio__left flex">
+                <label class="playlists-radio__lbl playlists-radio__lbl--1 text-lg" for="radio-btn-1" tabindex="0">
+                  <input class="playlists-radio__input" type="radio" name="radio" id="radio-btn-1" checked>
+                  <span class="playlists-radio__btn">
+                    <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="13" cy="13" r="12" stroke-width="2" />
+                    </svg>
+                  </span>
+                  Постпанк
+                </label>
+                <label class="playlists-radio__lbl playlists-radio__lbl--2 text-lg" for="radio-btn-2" tabindex="0">
+                  <input class="playlists-radio__input" type="radio" name="radio" id="radio-btn-2">
+                  <span class="playlists-radio__btn">
+                    <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="13" cy="13" r="12" stroke-width="2" />
+                    </svg>
+                  </span>
+                  Хардкор
+                </label>
+                <label class="playlists-radio__lbl playlists-radio__lbl--3 text-lg" for="radio-btn-3" tabindex="0">
+                  <input class="playlists-radio__input" type="radio" name="radio" id="radio-btn-3">
+                  <span class="playlists-radio__btn">
+                    <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="13" cy="13" r="12" stroke-width="2" />
+                    </svg>
+                  </span>
+                  Панк-рок
+                </label>
+                <label class="playlists-radio__lbl playlists-radio__lbl--4 text-lg" for="radio-btn-4" tabindex="0">
+                  <input class="playlists-radio__input" type="radio" name="radio" id="radio-btn-4">
+                  <span class="playlists-radio__btn">
+                    <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="13" cy="13" r="12" stroke-width="2" />
+                    </svg>
+                  </span>
+                  Рок
+                </label>
+              </div>
+              <div class="playlists-radio__right flex">
+                <label class="playlists-radio__lbl playlists-radio__lbl--5 text-lg" for="radio-btn-5" tabindex="0">
+                  <input class="playlists-radio__input" type="radio" name="radio" id="radio-btn-5">
+                  <span class="playlists-radio__btn">
+                    <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="13" cy="13" r="12" stroke-width="2" />
+                    </svg>
+                  </span>
+                  Прогрессивный рок
+                </label>
+                <label class="playlists-radio__lbl playlists-radio__lbl--6 text-lg" for="radio-btn-6" tabindex="0">
+                  <input class="playlists-radio__input" type="radio" name="radio" id="radio-btn-6">
+                  <span class="playlists-radio__btn">
+                    <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="13" cy="13" r="12" stroke-width="2" />
+                    </svg>
+                  </span>
+                  Электронная музыка
+                </label>
+                <label class="playlists-radio__lbl playlists-radio__lbl--7 text-lg" for="radio-btn-7" tabindex="0">
+                  <input class="playlists-radio__input" type="radio" name="radio" id="radio-btn-7">
+                  <span class="playlists-radio__btn">
+                    <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="13" cy="13" r="12" stroke-width="2" />
+                    </svg>
+                  </span>
+                  Классическая музыка
+                </label>
+                <label class="playlists-radio__lbl playlists-radio__lbl--8 text-lg" for="radio-btn-8" tabindex="0">
+                  <input class="playlists-radio__input" type="radio" name="radio" id="radio-btn-8">
+                  <span class="playlists-radio__btn">
+                    <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="13" cy="13" r="12" stroke-width="2" />
+                    </svg>
+                  </span>
+                  Звуки природы и&nbsp;шум города
+                </label>
+              </div>
             </form>
             <div class="playlists__left-content">
               <p class="playlists__left-age-limit text-sm">Раздел &laquo;Плейлисты&raquo; может содержать информацию,
@@ -2070,7 +2174,7 @@
             <li class="playlists__item">
               <a class="playlists__item-link" href="#">
                 <picture class="playlists__item-pic">
-                  <source srcset="./img/playlists-ploho-1024.jpg" media="(max-width: 1025px)">
+                  <source srcset="./img/playlists-ploho-1024.jpg" media="(max-width: 1200px)">
                   <img src="./img/playlist-ploho.jpg" alt="Фото музыкального коллектива">
                 </picture>
                 <img class="playlists__item-flag" src="./img/country-russia.svg" alt="Флаг России">
@@ -2083,7 +2187,7 @@
             <li class="playlists__item">
               <a class="playlists__item-link" href="#">
                 <picture class="playlists__item-pic">
-                  <source srcset="./img/playlists-molchat-doma-1024.jpg" media="(max-width: 1025px)">
+                  <source srcset="./img/playlists-molchat-doma-1024.jpg" media="(max-width: 1200px)">
                   <img src="./img/playlist-molchat-doma.jpg" alt="Фото музыкального коллектива">
                 </picture>
                 <img class="playlists__item-flag" src="./img/country-russia.svg" alt="Флаг России">
@@ -2096,7 +2200,7 @@
             <li class="playlists__item">
               <a class="playlists__item-link" href="#">
                 <picture class="playlists__item-pic">
-                  <source srcset="./img/playlists-motorama-1024.jpg" media="(max-width: 1025px)">
+                  <source srcset="./img/playlists-motorama-1024.jpg" media="(max-width: 1200px)">
                   <img src="./img/playlist-motorama.jpg" alt="Фото музыкального коллектива">
                 </picture>
                 <img class="playlists__item-flag" src="./img/country-russia.svg" alt="Флаг России">
@@ -2109,7 +2213,7 @@
             <li class="playlists__item">
               <a class="playlists__item-link" href="#">
                 <picture class="playlists__item-pic">
-                  <source srcset="./img/playlists-human-tetris-1024.jpg" media="(max-width: 1025px)">
+                  <source srcset="./img/playlists-human-tetris-1024.jpg" media="(max-width: 1200px)">
                   <img src="./img/playlist-human-tetris.jpg" alt="Фото музыкального коллектива">
                 </picture>
                 <img class="playlists__item-flag" src="./img/country-russia.svg" alt="Флаг России">
@@ -2122,7 +2226,7 @@
             <li class="playlists__item">
               <a class="playlists__item-link" href="#">
                 <picture class="playlists__item-pic">
-                  <source srcset="./img/playlists-buerak-1024.jpg" media="(max-width: 1025px)">
+                  <source srcset="./img/playlists-buerak-1024.jpg" media="(max-width: 1200px)">
                   <img src="./img/playlist-buerak.jpg" alt="Фото музыкального коллектива">
                 </picture>
                 <img class="playlists__item-flag" src="./img/country-russia.svg" alt="Флаг России">
@@ -2135,7 +2239,7 @@
             <li class="playlists__item">
               <a class="playlists__item-link" href="#">
                 <picture class="playlists__item-pic">
-                  <source srcset="./img/playlists-july-days-1024.jpg" media="(max-width: 1025px)">
+                  <source srcset="./img/playlists-july-days-1024.jpg" media="(max-width: 1200px)">
                   <img src="./img/playlist-july-days.jpg" alt="Фото музыкального коллектива">
                 </picture>
                 <img class="playlists__item-flag" src="./img/country-russia.svg" alt="Флаг России">
@@ -2148,7 +2252,7 @@
             <li class="playlists__item">
               <a class="playlists__item-link" href="#">
                 <picture class="playlists__item-pic">
-                  <source srcset="./img/playlists-joy-division-1024.jpg" media="(max-width: 1025px)">
+                  <source srcset="./img/playlists-joy-division-1024.jpg" media="(max-width: 1200px)">
                   <img src="./img/playlist-joy-division.jpg" alt="Фото музыкального коллектива">
                 </picture>
                 <img class="playlists__item-flag" src="./img/country-england.svg" alt="Флаг Великобритании">
@@ -2161,7 +2265,7 @@
             <li class="playlists__item">
               <a class="playlists__item-link" href="#">
                 <picture class="playlists__item-pic">
-                  <source srcset="./img/playlists-the-cure-1024.jpg" media="(max-width: 1025px)">
+                  <source srcset="./img/playlists-the-cure-1024.jpg" media="(max-width: 1200px)">
                   <img src="./img/playlist-the-cure.jpg" alt="Фото музыкального коллектива">
                 </picture>
                 <img class="playlists__item-flag" src="./img/country-england.svg" alt="Флаг Великобритании">
@@ -2174,7 +2278,7 @@
             <li class="playlists__item">
               <a class="playlists__item-link" href="#">
                 <picture class="playlists__item-pic">
-                  <source srcset="./img/playlists-the-smiths-1024.jpg" media="(max-width: 1025px)">
+                  <source srcset="./img/playlists-the-smiths-1024.jpg" media="(max-width: 1200px)">
                   <img src="./img/playlist-the-smiths.jpg" alt="Фото музыкального коллектива  ">
                 </picture>
                 <img class="playlists__item-flag" src="./img/country-england.svg" alt="Флаг Великобритании">
@@ -2187,7 +2291,7 @@
             <li class="playlists__item">
               <a class="playlists__item-link" href="#">
                 <picture class="playlists__item-pic">
-                  <source srcset="./img/playlists-new-order-1024.jpg" media="(max-width: 1025px)">
+                  <source srcset="./img/playlists-new-order-1024.jpg" media="(max-width: 1200px)">
                   <img src="./img/playlist-new-order.jpg" alt="Фото музыкального коллектива">
                 </picture>
                 <img class="playlists__item-flag" src="./img/country-england.svg" alt="Флаг Великобритании">
@@ -2200,7 +2304,7 @@
             <li class="playlists__item">
               <a class="playlists__item-link" href="#">
                 <picture class="playlists__item-pic">
-                  <source srcset="./img/playlists-bauhaus-1024.jpg" media="(max-width: 1025px)">
+                  <source srcset="./img/playlists-bauhaus-1024.jpg" media="(max-width: 1200px)">
                   <img src="./img/playlist-bauhaus.jpg" alt="Фото музыкального коллектива">
                 </picture>
                 <img class="playlists__item-flag" src="./img/country-england.svg" alt="Флаг Великобритании">
@@ -2213,7 +2317,7 @@
             <li class="playlists__item">
               <a class="playlists__item-link" href="#">
                 <picture class="playlists__item-pic">
-                  <source srcset="./img/playlists-gang-of-four-1024.jpg" media="(max-width: 1025px)">
+                  <source srcset="./img/playlists-gang-of-four-1024.jpg" media="(max-width: 1200px)">
                   <img src="./img/playlist-gang-of-four.jpg" alt="Фото музыкального коллектива">
                 </picture>
                 <img class="playlists__item-flag" src="./img/country-england.svg" alt="Флаг Великобритании">
@@ -2224,6 +2328,14 @@
               </a>
             </li>
           </ul>
+          <div class="playlists__adaptive col-12">
+            <span class="underline"></span>
+            <p class="playlists__left-age-limit text-sm">Раздел &laquo;Плейлисты&raquo; может содержать информацию,
+              не&nbsp;предназначенную <br> для несовершеннолетних
+            </p>
+            <span class="playlists__left-copy text-sm">&copy;&nbsp;2021&nbsp;l W-Wave</span>
+            <img class="playlists__left-img" src="./img/playlist-age-limit.svg" alt="Контент для лиц в возрасте 18+">
+          </div>
         </div>
       </div>
     </section>
@@ -2234,8 +2346,8 @@
             <picture class="advertising__picture">
               <source srcset="./img/radio-320.png" media="(max-width: 321px)">
               <source srcset="./img/radio-768.png" media="(max-width: 769px)">
-              <source srcset="./img/radio-1024.png" media="(max-width: 1025px)">
-              <img class="advertising__img" src="./img/radio-desctop.png" alt="Фото радиприемника">
+              <source srcset="./img/radio-1024.png" media="(max-width: 1200px)">
+              <img class="advertising__img" src="./img/radio-desctop.png" alt="Фото радиоприемника">
             </picture>
             <div class="advertising__picture-mark"></div>
           </div>
@@ -2278,7 +2390,7 @@
     <section class="about-us" id="about-us">
       <div class="container about-us__container flex">
         <div class="row about-us__top">
-          <div class="col-7">
+          <div class="col-7 about-us-content">
             <h2 class="about-us-title title-2">О&nbsp;нас</h2>
             <p class="adout-us-greetings text-lg">Приём-приём! Как слышно? Мы&nbsp;уже в&nbsp;эфире? Отлично, поехали!
             </p>

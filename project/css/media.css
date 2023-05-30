@@ -1,24 +1,292 @@
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
+  /* global */
   .container {
     padding-left: 100px;
     padding-right: 100px;
   }
 
+  br {
+    display: none;
+  }
+
+  :root {
+    --container-max-width: 1140px;
+    --container-padding: 15px;
+    --columns: 12;
+    --gutter: 30px;
+    --gap: 30px;
+    --black: #121723;
+    --violet: #6d31ee;
+    --white: #ffffff;
+    --light-violet: #aa9dfa;
+    --gray: #a1a6b4;
+    --light-gray: #d2d5dd;
+    --gray-bg: #f2f2f2;
+    --gray-line: #e6e8ec;
+    --active: #4f28a5;
+    --gold: #f0d288;
+    --font-size-h1: 60px;
+    --font-size-h2: 48px;
+    --font-size-h3: 20px;
+    --font-size-h4: 16px;
+    --text-size-lg: 20px;
+    --text-size-sm: 16px;
+    --btn-2-radius: 77px;
+    --btn-1-radius: 40px;
+    --btn-1-text: 16px;
+    --btn-2-text: 20px;
+  }
+
+  /* header */
+  .header__top {
+    padding: 0;
+  }
+
+  .header__logo {
+    display: none;
+  }
+
+  .header__adaptive {
+    display: block;
+    padding-top: 23px;
+    padding-bottom: 17px;
+    background-color: var(--gray-bg);
+  }
+
+  .header__logo-adaptive {
+    display: block;
+    align-self: center;
+  }
+
+  .nav-wrapper {
+    justify-content: space-between;
+    align-items: center;
+    gap: 35px;
+    padding-top: 20px;
+    padding-bottom: 19px;
+    width: 100%;
+  }
+
+  .header__list--top {
+    justify-content: space-between;
+  }
+
+  .header__container--bottom {
+    gap: 0
+  }
+  .header__bottom {
+    padding-top: 9px;
+    padding-bottom: 9px;
+  }
+   .header__list--bottom {
+    gap: 28px;
+  }
+
+  .header__list-btn {
+    gap: 22px;
+  }
+
+  .header__item-btn--1 {
+    padding-right: 3px;
+  }
+  .header__item-btn--2 {
+    padding-left: 0;
+    padding-right: 18px;
+  }
+
+  .age-limit {
+    display: none;
+  }
+/* hero */
+.hero__content {
+  gap: 20px;
+}
+
+.hero__picture-bg {
+  top: -2px;
+  width:255px;
+}
+
+.hero__btn {
+  padding: 22px 53px;
+}
+
+/* podcasts */
+.podcasts {
+  padding-top: 93px;
+  padding-bottom: 94px;
+}
+
+.item-img {
+  width: 124px;
+}
+
+.podcasts__list {
+  margin-bottom: 34px;
+}
+
+.show-more-btn {
+  padding: 21px 53px;
+}
+
   .broadcast__list {
+    padding-top: 13px;
     --broadcast-elements: 2;
   }
   .broadcast__wrapper {
     align-items: flex-start;
   }
 
+/* guests */
+.guests {
+  padding-bottom: 97px;
+}
+.ac .ac-panel {
+  --ac-elements: 3;
+}
+
+.ac .ac-panel .ac-text--last {
+  display: flex;
+  width: 100%;
+  --last-element: 3;
+}
+.item-list--last {
+  flex-direction: row;
+  gap: 30px;
+  width: 100%;
+}
+
+.item-list__item {
+  width: calc((100% - (var(--last-element) - 1) * var(--gap)) / (var(--last-element)));
+}
+
+.tabs-item__img {
+  height: 157px;
+}
+
+.twitter {
+  width: 20.38px;
+  height: 16.57px;
+}
   /* playlists */
+  .playlists {
+    padding-bottom: 87px;
+  }
   .playlists__wrapper {
     flex-direction: column;
   }
 
+  .playlists__radio-title {
+    margin-bottom: 9px;
+  }
+
+  .playlists-radio {
+    gap: 26px 33px;
+    border-bottom: 0;
+  }
+
+  .playlists-radio__lbl {
+    transform: translateY(5px);
+}
+
+.playlists__item-pic {
+  max-height: 112px;
+  max-width: 112px;
+}
+
+.playlists__left-content {
+  display: none;
+  position: absolute;
+  top: 1030px;
+  left: 10px;
+  width: 100%;
+}
+
   .playlists__list {
-    position: absolute;
+    margin-bottom: 39px;
+    padding-top: 8px;
     --playlists-elements: 3;
+  }
+
+  .playlists__item-link {
+    flex-direction: row;
+  }
+
+  .playlists__item-flag {
+    position: absolute;
+    left: 0;
+  }
+
+  .playlists__item-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 38px 0 40px 9px;
+    width: 100%;
+    max-height: 112px;
+  }
+
+  .playlists__adaptive {
+    display: block;
+    width: 100%;
+  }
+
+  .underline {
+    display: block;
+    margin-bottom: 38px;
+    height: 1px;
+    width: 100%;
+    background-color: var(--gray-line);
+  }
+
+  .playlists__left-age-limit {
+    margin-bottom: 4px;
+  }
+
+  /* advertising */
+  .advertising {
+    padding-bottom: 97px;
+  }
+  .advertising__left,
+  .advertising__right {
+    flex-basis: calc(calc(100% / var(--columns)) * 6);
+  }
+
+  .advertising__left {
+    transform: translateY(-15px);
+  }
+
+  .advertising__picture-mark {
+    left: 15px;
+    width: 100px;
+    height: 100px;
+  }
+
+  .advertising__description--1 {
+    margin-bottom: 13px;
+  }
+
+  .advertising__description--2 {
+    margin-bottom: 30px;
+ }
+
+
+  /* about-us */
+  .about-us-content {
+    flex-basis: calc(calc(100% / var(--columns)) * 8);
+  }
+
+  .about-us__dawn {
+    flex-basis: calc(calc(100% / var(--columns)) * 4);
+  }
+
+  .about-us__spiral {
+    display: none;
+  }
+
+  .about-us__middle {
+    margin-bottom: 6px;
   }
 
   .swiper-slide__img--1 {
@@ -29,11 +297,43 @@
     background-image: url("../img/vasilyeva-an-1024.jpg");
   }
 
-  .form__bottom {
-    --form__bottom-elements: 1;
+  .swiper-button-prev {
+    top: 38%;
+    left: -8%;
   }
 
-  .age-limit {
-    display: none;
+  .swiper-button-next {
+    top: 38%;
+    right: -8%;
   }
+
+ .about-us__bottom {
+  gap: 0;
  }
+
+ .form__input-box:not(:last-child) {
+  margin-bottom: 25px;
+  }
+
+  .message {
+    width: 100%;
+  }
+
+  .form__input-wrapper {
+    width: 100%;
+  }
+
+  .form__input-box--left {
+    margin-bottom: 10px;
+  }
+  .form__btn {
+    margin-bottom: 34px;
+    width: 25.73%;
+    transform: translateY(5px);
+  }
+
+}
+
+@media (max-width: 1024px) {
+
+}
