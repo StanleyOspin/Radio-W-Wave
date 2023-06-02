@@ -29,17 +29,17 @@
     </div>
     <div class="header__top">
       <div class="container header__container header__container--top flex">
-        <button class="btn-reset burger" aria-label="Открыть меню навигации" id="shift__menu">
-          <span class="burger__line"></span>
-          <span class="burger__line"></span>
-          <span class="burger__line"></span>
-        </button>
         <a class="logo header__logo" href="#">
           <img src="img/header-logo.svg" alt="Логотип Радио W-Wave">
         </a>
         <div class="nav-wrapper flex">
-          <nav class="nav nav--top">
-            <ul class="list header__list  header__list--top flex">
+          <button class="btn-reset burger" aria-label="Открыть меню навигации" id="shift__menu">
+            <span class="burger__line"></span>
+            <span class="burger__line"></span>
+            <span class="burger__line"></span>
+          </button>
+          <nav class="nav nav--top flex">
+            <ul class="list header__list  header__list--top header__list--top-left flex">
               <li class="header__item header__item--top">
                 <a class="nav__link header__link header__link--top" href="#podcasts">Подкасты</a>
               </li>
@@ -49,6 +49,8 @@
               <li class="header__item header__item--top">
                 <a class="nav__link header__link header__link--top" href="#guests">Гости</a>
               </li>
+            </ul>
+            <ul class="list header__list header__list--top header__list--top-right flex">
               <li class="header__item header__item--top">
                 <a class="nav__link header__link header__link--top" href="#playlists">Плейлисты</a>
               </li>
@@ -56,6 +58,10 @@
                 <a class="nav__link header__link header__link--top" href="#about-us">О&nbsp;нас</a>
               </li>
             </ul>
+            <div class="nav__bg-img flex">
+              <div class="nav__spiral nav__spiral--1"></div>
+              <div class="nav__spiral nav__spiral--2"></div>
+            </div>
           </nav>
           <div class="header__btn-wrapper flex">
             <label class="visually-hidden" for="search__btn">Открыть форму поиска</label>
@@ -95,11 +101,11 @@
                   <a href="#" class="registration-link text-lg" target="_blank">зарегистрируйтесь</a>
                 </div>
                 <form class="form modal__form" action="https://jsonplaceholder.typicode.com/posts" method="POST" id="modal-form">
-                  <div class="form__input-box">
+                  <div class="form__input-box modal__input-box">
                     <label class="modal__label visually-hidden" for="login">Логин</label>
                     <input class="form__input modal__form-input text-lg" id="login" type="text" placeholder="Логин" autocomplete="off">
                   </div>
-                  <div class="form__input-box">
+                  <div class="form__input-box modal__input-box">
                     <label class="modal__label visually-hidden" for="password">Пароль</label>
                     <input class="form__input modal__form-input text-lg" type="text" placeholder="Пароль" id="password" autocomplete="off">
                   </div>
@@ -176,10 +182,10 @@
                 <path
                   d="M10 0C4.475 0 0 4.475 0 10C0 15.525 4.475 20 10 20C15.525 20 20 15.525 20 10C20 4.475 15.525 0 10 0ZM8 14.5V5.5L14 10L8 14.5Z" />
               </svg>
-              <span class="on-the-air-content flex">
+              <div class="on-the-air-content flex">
                 <span class="on-the-air__text">Ранее в&nbsp;эфире</span>
                 <span class="on-the-air__track-name">&laquo;Музыка&raquo;</span>
-              </span>
+              </div>
             </button>
           </li>
           <li class="header__item-btn header__item-btn--2">
@@ -189,13 +195,20 @@
                 <path
                   d="M10 0C4.475 0 0 4.475 0 10C0 15.525 4.475 20 10 20C15.525 20 20 15.525 20 10C20 4.475 15.525 0 10 0ZM8 14.5V5.5L14 10L8 14.5Z" />
               </svg>
-              <span class="on-the-air-content flex">
+              <div class="on-the-air-content flex">
                 <span class="on-the-air__text">Сейчас в&nbsp;эфире</span>
                 <span class="on-the-air__track-name">&laquo;Как так?&raquo;</span>
-              </span>
+              </div>
             </button>
           </li>
         </ul>
+        <button class="on-the-air on-the-air--adaptive btn-reset">
+          <svg class="icon" width="20" height="20" viewBox="0 0 20 20" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M10 0C4.475 0 0 4.475 0 10C0 15.525 4.475 20 10 20C15.525 20 20 15.525 20 10C20 4.475 15.525 0 10 0ZM8 14.5V5.5L14 10L8 14.5Z" />
+          </svg>
+        </button>
         <svg class="age-limit" aria-label="Ограничение по возрасту 12+" width="46" height="60" viewBox="0 0 46 60"
           fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="46" height="60" fill="#E6E8EC" />
@@ -211,7 +224,7 @@
     <section class="hero">
       <div class="container">
         <div class="row hero__row">
-          <div class="col-7">
+          <div class="col-7 hero__left">
             <div class="content hero__content flex">
               <div class="hero__content-wrapper flex">
                 <h1 class="title-1 hero__title">Радио <i>W-Wave</i></h1>
@@ -1045,11 +1058,20 @@
           </ul>
         </div>
       </div>
+    <span class="broadcast__underline"></span>
+    <div class="container broadcast__bottom-adaptive">
+      <div class="broadcast__bottom-img"></div>
+      <div class="broadcast__bottom-content">
+        <a href="#" class="broadcast__bottom-btn btn-2">Архив</a>
+        <p class="broadcast__bottom-text text-sm">В&nbsp;архив попадают все передачи, которые вы&nbsp;пропустили!
+        Enjoy:)</p>
+      </div>
+    </div>
     </section>
     <section class="guests" id="guests">
       <div class="container guests__container">
         <div class="row guests__top">
-          <div class="col-9">
+          <div class="col-9 guests__top-col">
             <h2 class="title-2 guests__title">Гости</h2>
             <p class="guests__is-visited text-lg">У&nbsp;нас бывают:</p>
             <p class="guests__visitors text-lg">Блогеры, арт-критики и&nbsp;деятели искусства, музыканты, молодые учёные
@@ -2399,8 +2421,12 @@
               предеачах, темах, подборках и&nbsp;вообще обо всём! Это можно сделать либо написав нам в&nbsp;форме ниже,
               либо кликнув на&nbsp;наши соцсети в&nbsp;подвале сайта. Спасибо! Услышимся!:)</p>
           </div>
-          <div class="col-2 about-us__spiral"></div>
-          <div class="col-3 about-us__dawn"></div>
+          <div class="col-5 about-us__img-wrapper flex">
+            <div class="about-us__spiral-wrapper">
+              <div class="about-us__spiral"></div>
+            </div>
+            <div class="about-us__dawn"></div>
+          </div>
         </div>
         <div class="about-us__middle">
           <div class="swiper mySwiper">
@@ -2585,6 +2611,7 @@
     </footer>
 
   </main>
+  <script defer src="./js/burger.js"></script>
   <script defer src="./js/search.js"></script>
   <script defer src="./js/modal.js"></script>
   <script defer src="./js/podcasts-play-btn.js"></script>
