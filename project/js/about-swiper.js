@@ -1,5 +1,5 @@
-let swiper = new Swiper(".mySwiper", {
-  slidesPerView: 1,
+let swiper = new Swiper(".about-swiper", {
+  slidesPerView: 2,
   spaceBetween: 30,
   loop: true,
   navigation: {
@@ -7,7 +7,12 @@ let swiper = new Swiper(".mySwiper", {
     prevEl: ".swiper-button-prev",
   },
   breakpoints: {
-    768: {
+    320: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+
+    401: {
       slidesPerView: 2,
       spaceBetween: 30,
     },
