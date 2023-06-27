@@ -2651,25 +2651,27 @@
       </div>
     </section>
     <section class="about-us" id="about-us">
-      <div class="container about-us__container flex">
-        <div class="row about-us__top">
-          <div class="col-7 about-us-content">
-            <h2 class="about-us-title title-2">О&nbsp;нас</h2>
-            <p class="adout-us-greetings text-lg">Приём-приём! Как слышно? Мы&nbsp;уже в&nbsp;эфире? Отлично, поехали!
-            </p>
-            <p class="about-us-description text-lg">Друзья, мы&nbsp;будем очень рады, если вы&nbsp;поможете стать нам
-              лучше. Нам важен каждый слушатель, поэтому вы&nbsp;можете поделиться обратной связью о&nbsp;наших
-              предеачах, темах, подборках и&nbsp;вообще обо всём! Это можно сделать либо написав нам в&nbsp;форме ниже,
-              либо кликнув на&nbsp;наши соцсети в&nbsp;подвале сайта. Спасибо! Услышимся!:)</p>
-          </div>
-          <div class="col-5 about-us__img-wrapper flex">
-            <div class="about-us__spiral-wrapper">
-              <div class="about-us__spiral"></div>
+      <div class="about-us__wrapper flex">
+        <div class="about-us__top container">
+          <div class="row about-us__top-row">
+            <div class="col-7 about-us-content">
+              <h2 class="about-us-title title-2">О&nbsp;нас</h2>
+              <p class="adout-us-greetings text-lg">Приём-приём! Как слышно? Мы&nbsp;уже в&nbsp;эфире? Отлично, поехали!
+              </p>
+              <p class="about-us-description text-lg">Друзья, мы&nbsp;будем очень рады, если вы&nbsp;поможете стать нам
+                лучше. Нам важен каждый слушатель, поэтому вы&nbsp;можете поделиться обратной связью о&nbsp;наших
+                предеачах, темах, подборках и&nbsp;вообще обо всём! Это можно сделать либо написав нам в&nbsp;форме ниже,
+                либо кликнув на&nbsp;наши соцсети в&nbsp;подвале сайта. Спасибо! Услышимся!:)</p>
             </div>
-            <div class="about-us__dawn"></div>
+            <div class="col-5 about-us__img-wrapper flex">
+              <div class="about-us__spiral-wrapper">
+                <div class="about-us__spiral"></div>
+              </div>
+              <div class="about-us__dawn"></div>
+            </div>
           </div>
         </div>
-        <div class="about-us__middle">
+        <div class="container swiper__container">
           <div class="swiper about-swiper">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
@@ -2718,34 +2720,37 @@
             </div>
           </div>
           <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
+            <div class="swiper-button-prev"></div>
         </div>
-        <form class="form about-us__bottom flex" id="footer-form" action="#">
-          <div class="form__input-box">
-            <label class="label visually-hidden" for="message">Введите сообщение</label>
-            <textarea class="form__textarea message" name="message" id="message" placeholder="Что скажете?"
-              data-validate-field="message" autocomplete="off"></textarea>
-          </div>
-          <div class="form__input-wrapper flex">
+
+        <div class="about-us__form container">
+          <form class="form about-us__form flex" id="footer-form" action="#">
             <div class="form__input-box">
-              <label class="label visually-hidden" for="name">Введите имя</label>
-              <input class="form__input name" name="name" type="text" placeholder="Имя" id="name"
-                data-validate-field="name" autocomplete="off">
+              <label class="label visually-hidden" for="message">Введите сообщение</label>
+              <textarea class="form__textarea message" name="message" id="message" placeholder="Что скажете?"
+                data-validate-field="message" autocomplete="off"></textarea>
             </div>
-            <div class="form__input-box">
-              <label class="label visually-hidden" for="email">Введите email</label>
-              <input class="form__input email" name="email" type="email" placeholder="Email" id="email"
-                data-validate-field="email" autocomplete="off">
+            <div class="form__input-wrapper flex">
+              <div class="form__input-box">
+                <label class="label visually-hidden" for="name">Введите имя</label>
+                <input class="form__input name" name="name" type="text" placeholder="Имя" id="name"
+                  data-validate-field="name" autocomplete="off">
+              </div>
+              <div class="form__input-box">
+                <label class="label visually-hidden" for="email">Введите email</label>
+                <input class="form__input email" name="email" type="email" placeholder="Email" id="email"
+                  data-validate-field="email" autocomplete="off">
+              </div>
             </div>
-          </div>
-          <button class="form__btn btn-2" aria-label="Отправить">Отправить</button>
-          <label class="label flex">
-            <input class="form__checkbox" name="checkbox" type="checkbox" checked>
-            <span class="form__checkbox-label" tabindex="0"
-              aria-label="Согласен на обработку персональных данных"></span>
-            <span class="form__checkbox-text">Согласен на&nbsp;обработку персональных данных</span>
-          </label>
-        </form>
+            <button class="form__btn btn-2" aria-label="Отправить">Отправить</button>
+            <label class="label flex">
+              <input class="form__checkbox" name="checkbox" type="checkbox" checked>
+              <span class="form__checkbox-label" tabindex="0"
+                aria-label="Согласен на обработку персональных данных"></span>
+              <span class="form__checkbox-text">Согласен на&nbsp;обработку персональных данных</span>
+            </label>
+          </form>
+        </div>
       </div>
     </section>
     <footer class="footer">

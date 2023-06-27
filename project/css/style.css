@@ -196,13 +196,14 @@ body {
   padding: 0;
   white-space: nowrap;
   clip-path: inset(100%);
-  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
   overflow: hidden;
 }
 
 .hidden {
   display: none !important;
 }
+
 .container {
   margin: 0 auto;
   width: 100%;
@@ -548,6 +549,7 @@ body {
   position: relative;
   outline: none;
   z-index: 1;
+  cursor: pointer;
   transition: color 0.3s ease-in-out;
 }
 
@@ -1191,7 +1193,7 @@ body {
 }
 
 .broadcast__item {
-  width: calc((100% - (var(--broadcast-elements) - 1) * var(--gap)) / (var(--broadcast-elements)));
+  width: calc((100% - (var(--broadcast-elements) - 1) * var(--gap)) / var(--broadcast-elements));
   min-height: 260px;
 }
 
@@ -1464,7 +1466,7 @@ body {
 
 /* guests */
 .guests {
-  padding-top: 94px;
+  padding-top: 95px;
   padding-bottom: 95px;
   background-color: var(--black);
 }
@@ -1527,7 +1529,7 @@ body {
 
 .ac .ac-panel .ac-text {
   padding: 0;
-  width: calc((100% - (var(--ac-elements) - 1) * var(--gap)) / (var(--ac-elements)));
+  width: calc((100% - (var(--ac-elements) - 1) * var(--gap)) / var(--ac-elements));
   font-family: "Muller";
   font-size: 16px;
   line-height: 100%;
@@ -1837,6 +1839,7 @@ path {
   padding-left: 37px;
   line-height: 100%;
   transform: translateY(3px);
+  cursor: pointer;
 }
 
 
@@ -1921,7 +1924,7 @@ path {
 
 .playlists__item {
   position: relative;
-  width: calc((100% - (var(--playlists-elements) - 1) * var(--gap)) / (var(--playlists-elements)));
+  width: calc((100% - (var(--playlists-elements) - 1) * var(--gap)) / var(--playlists-elements));
   border-left: 1px solid var(--gray-line);
   border-right: 1px solid var(--gray-line);
   border-bottom: 1px solid var(--gray-line);
@@ -2181,13 +2184,13 @@ path {
   background-color: var(--black);
 }
 
-.about-us__container {
+.about-us__wrapper {
   flex-direction: column;
   gap: var(--gap);
 }
 
 
-.about-us__top {
+.about-us__top-row {
   align-items: center;
 }
 
@@ -2231,11 +2234,12 @@ path {
   height: 255px;
 }
 
-.about-us__middle {
+
+/* swiper */
+.swiper__container{
   position: relative;
 }
 
-/* swiper */
 .swiper-slide__img {
   margin-bottom: 30px;
   background-repeat: no-repeat;
@@ -2243,6 +2247,7 @@ path {
   background-size: 100%;
   width: 100%;
   height: 255px;
+  cursor: pointer;
 }
 
 .swiper-slide__img--1 {
@@ -2308,14 +2313,14 @@ path {
 }
 
 .swiper-button-next {
-  top: 36%;
-  right: -6.8%;
+  top: 130px;
+  right: -60px;
   outline: none;
 }
 
 .swiper-button-prev {
-  top: 36%;
-  left: -6.7%;
+  top: 130px;
+  left: -60px;
   outline: none;
 }
 
@@ -2328,6 +2333,7 @@ path {
   background-color: var(--black);
   border: 1px solid var(--white);
   border-radius: 30px;
+  cursor: pointer;
   transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
@@ -2369,7 +2375,7 @@ path {
   outline: none;
 }
 
-.about-us__bottom {
+.about-us__form {
   flex-direction: column;
   gap: var(--gap);
 }
@@ -2388,7 +2394,7 @@ path {
 
 .form__input-box {
   position: relative;
-  width: calc((100% - (var(--form__bottom-elements) - 1) * var(--gap)) / (var(--form__bottom-elements)));
+  width: calc((100% - (var(--form__bottom-elements) - 1) * var(--gap)) / var(--form__bottom-elements));
   font-size: 0;
 }
 
@@ -2406,6 +2412,7 @@ path {
   background-color: var(--violet);
   border: 2px solid transparent;
   outline: none;
+  cursor: pointer;
   transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
@@ -2432,6 +2439,7 @@ path {
 
 .label {
   align-items: flex-end;
+  cursor: pointer;
 }
 
 .label .form__checkbox-label {
@@ -2499,11 +2507,11 @@ path {
 }
 
 .footer__left {
-  width: calc((100% - (var(--footer-elements) - 1) * var(--foot-gap)) / (var(--footer-elements)));
+  width: calc((100% - (var(--footer-elements) - 1) * var(--foot-gap)) / var(--footer-elements));
 }
 
 .footer__right {
-  width: calc((100% - (var(--footer-elements) - 1) * var(--foot-gap)) / (var(--footer-elements)));
+  width: calc((100% - (var(--footer-elements) - 1) * var(--foot-gap)) / var(--footer-elements));
 }
 .footer__logo {
   display: inline-block;

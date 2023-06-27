@@ -12,7 +12,7 @@ let swiper = new Swiper(".about-swiper", {
       spaceBetween: 20,
     },
 
-    401: {
+    440: {
       slidesPerView: 2,
       spaceBetween: 30,
     },
