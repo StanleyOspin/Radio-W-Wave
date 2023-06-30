@@ -67,7 +67,6 @@ aboutValidator
     })
     let result = await response.text()
     alert(result);
-    console.log(data);
   })
 
 
