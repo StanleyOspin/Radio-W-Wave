@@ -52,6 +52,22 @@ aboutValidator
     rule: 'email',
     errorMessage: 'Вы не корректно ввели email'
     }
-  ])
+  ]).onSuccess(async function () {
+    let data = {
+      message: document.getElementById('message').value,
+      name: document.getElementById('name').value,
+      email: document.getElementById('email').value,
+    }
+    let response = await fetch('mail.php', {
+      method: 'POST',
+      body: JSON.stringify(data),
+      headers: {
+        "Content-Type": "application/json; charset = UTF-8"
+      }
+    })
+    let result = await response.text()
+    alert(result);
+    console.log(data);
+  })
 
 
